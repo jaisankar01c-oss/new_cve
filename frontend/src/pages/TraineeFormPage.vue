@@ -64,6 +64,15 @@
           <div class="col-md-6"><label class="form-label">Mother Name</label><input v-model="form.motherName" class="form-control" type="text" placeholder="Enter Mother Name" /></div>
         </div>
         <div class="row g-3 mt-0">
+          <div class="col-md-4">
+            <label class="form-label">Photo</label>
+            <input class="form-control" type="file" accept="image/*" @change="onPhotoChange" />
+            <div v-if="form.photoUrl" class="mt-2">
+              <img :src="form.photoUrl" alt="Preview" class="avatar-lg rounded border" />
+            </div>
+          </div>
+        </div>
+        <div class="row g-3 mt-0">
           <div class="col-md-6"><label class="form-label">Religion</label>
             <select v-model="form.religion" class="form-select">
               <option value="">Select Religion</option>
