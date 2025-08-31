@@ -214,7 +214,7 @@
           <div class="col-md-4"><label class="form-label">Pincode</label><input v-model="form.permanentAddress.pincode" class="form-control" type="text" placeholder="Pincode" /></div>
 
           <div class="col-12 mt-2">
-            <h6 class="text-muted mt-3">Present Address</h6>
+            <h6 class="text-muted mt-3">Present Address :</h6>
           </div>
 
           <div class="col-12 mt-2">
