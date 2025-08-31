@@ -11,6 +11,11 @@
             <div class="card-body">
               <h4 class="section-heading text-secondary">Official Information</h4>
               <div class="row g-3">
+                <div class="col-md-3 text-center">
+                  <label class="form-label d-block">Photo</label>
+                  <img v-if="user.photoUrl" :src="user.photoUrl" alt="Photo" class="avatar-lg rounded border" />
+                  <span v-else class="text-muted small">No photo</span>
+                </div>
                 <div class="col-md-3"><label class="form-label">FACE ID</label><div class="border rounded p-2">{{ user.faceId }}</div></div>
                 <div class="col-md-3"><label class="form-label">Name of the OSA</label><div class="border rounded p-2">{{ user.name }}</div></div>
                 <div class="col-md-3"><label class="form-label">CVE ID No</label><div class="border rounded p-2">{{ user.cveId || '-' }}</div></div>
