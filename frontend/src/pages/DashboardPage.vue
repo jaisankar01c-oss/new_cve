@@ -71,12 +71,16 @@
               </tr>
             </thead>
             <tbody>
-              <tr v-for="u in filteredUsers" :key="u.faceId">
+              <tr v-for="u in paginatedUsers" :key="u.faceId">
                 <td>{{ u.faceId }}</td>
                 <td>{{ u.name }}</td>
                 <td>{{ u.mobile }}</td>
                 <td>{{ u.gender }}</td>
-                <td><span class="badge" :class="badgeClass(u.status)">{{ u.status }}</span></td>
+                <td>
+                  <div :class="statusAlertClass(u.status)" class="py-1 px-2 mb-0">
+                    {{ u.status }}
+                  </div>
+                </td>
                 <td>
                   <button class="btn btn-outline-primary btn-sm" @click="openView(u)">View</button>
                 </td>
@@ -84,6 +88,20 @@
             </tbody>
           </table>
         </div>
+        <nav v-if="totalPages > 1" class="mt-2">
+          <ul class="pagination pagination-sm justify-content-end mb-0">
+            <li :class="['page-item', { disabled: currentPage === 1 }]">
+              <button class="page-link" @click="goToPage(currentPage - 1)" :disabled="currentPage===1">&lt;</button>
+            </li>
+            <li v-for="item in paginationItems" :key="'p-'+item.key" :class="['page-item', { active: item.page === currentPage, disabled: item.ellipsis }]">
+              <button v-if="!item.ellipsis" class="page-link" @click="goToPage(item.page)">{{ item.label }}</button>
+              <span v-else class="page-link">…</span>
+            </li>
+            <li :class="['page-item', { disabled: currentPage === totalPages }]">
+              <button class="page-link" @click="goToPage(currentPage + 1)" :disabled="currentPage===totalPages">&gt;</button>
+            </li>
+          </ul>
+        </nav>
       </div>
     </section>
 
