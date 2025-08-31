@@ -10,7 +10,7 @@ body { margin: 0; font-family: var(--font-family); color: var(--color-dark); bac
 .bg-brand { background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark)) !important; color: var(--color-white) !important; }
 
 /* Buttons */
-.btn-primary { background-color: var(--color-primary) !important; border-color: var(--color-primary) !important; }
+.btn-primary { background-color: var(--color-primary) !important; border-color: var(--color-primary) !important; height: 44px !important;}
 .btn-primary:hover { background-color: var(--color-primary-dark) !important; border-color: var(--color-primary-dark) !important; }
 .btn-outline-primary { color: var(--color-primary) !important; border-color: var(--color-primary) !important; }
 .btn-outline-primary:hover { background-color: var(--color-primary) !important; color: var(--color-white) !important; }
