@@ -62,7 +62,8 @@
           <div class="col-md-4" v-else-if="form.maritalStatus==='Single'"><label class="form-label">Sibling Name</label><input v-model="form.siblingName" class="form-control" type="text" placeholder="Enter Sibling Name" /></div>
         </div>
         <div class="row g-3 mt-0">
-          <div class="col-12"><label class="form-label">Educational Qualification</label>
+          <div class="col-12 col-md-4">
+            <label class="form-label">Educational Qualification</label>
             <select v-model="form.qualification" class="form-select">
               <option value="">Select Qualification</option>
               <option>School</option>
