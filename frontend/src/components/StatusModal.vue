@@ -21,7 +21,7 @@
               <textarea id="remarks" v-model="remarks" class="form-control" placeholder="Enter remarks"></textarea>
             </div>
             <div class="modal-footer border-top-0 text-center d-flex justify-content-center">
-              <button type="submit" class="btn btn-primary px-5">Save</button>
+              <button type="submit" class="btn btn-primary 100">Save</button>
             </div>
           </form>
         </div>
