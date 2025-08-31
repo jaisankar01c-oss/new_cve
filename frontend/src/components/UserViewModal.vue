@@ -12,7 +12,7 @@
         <div class="modal-body">
           <div class="card mb-3">
             <div class="card-body">
-              <h4 class="section-heading">Official Information</h4>
+              <h4 class="section-heading text-secondary">Official Information</h4>
               <div class="row g-3">
                 <div class="col-md-3"><label class="form-label">FACE ID</label><div class="border rounded p-2">{{ user.faceId }}</div></div>
                 <div class="col-md-3"><label class="form-label">Name of the OSA</label><div class="border rounded p-2">{{ user.name }}</div></div>
@@ -24,7 +24,7 @@
 
           <div class="card mb-3">
             <div class="card-body">
-              <h4 class="section-heading">Personal Information</h4>
+              <h4 class="section-heading text-secondary">Personal Information</h4>
               <div class="row g-3">
                 <div class="col-md-4"><label class="form-label">Name</label><div class="border rounded p-2">{{ user.name }}</div></div>
                 <div class="col-md-4"><label class="form-label">Gender</label><div class="border rounded p-2">{{ user.gender }}</div></div>
@@ -51,7 +51,7 @@
 
           <div class="card mb-3">
             <div class="card-body">
-              <h4 class="section-heading">Contact Details</h4>
+              <h4 class="section-heading text-secondary">Contact Details</h4>
               <div class="row g-3">
                 <div class="col-12"><label class="form-label">Permanent Address</label><div class="border rounded p-2">{{ user.permAddress }}</div></div>
                 <div class="col-12"><label class="form-label">Present Address</label><div class="border rounded p-2">{{ user.presAddress }}</div></div>
@@ -63,7 +63,7 @@
 
           <div class="card mb-3">
             <div class="card-body">
-              <h4 class="section-heading">Medical Details</h4>
+              <h4 class="section-heading text-secondary">Medical Details</h4>
               <div class="row g-3">
                 <div class="col-md-6"><label class="form-label">Identification Marks</label><div class="border rounded p-2">{{ user.marks?.[0] }}</div></div>
                 <div class="col-md-6"><label class="form-label">Blood Group</label><div class="border rounded p-2">{{ user.bloodGroup }}</div></div>
@@ -73,7 +73,7 @@
 
           <div class="card">
             <div class="card-body">
-              <h4 class="section-heading">Experience &amp; Training</h4>
+              <h4 class="section-heading text-secondary">Experience &amp; Training</h4>
               <div class="row g-3">
                 <div class="col-md-4"><label class="form-label">Reference By</label><div class="border rounded p-2">{{ user.referenceBy }}</div></div>
                 <div class="col-md-4"><label class="form-label">Date of Joining</label><div class="border rounded p-2">{{ user.dateOfJoining }}</div></div>
