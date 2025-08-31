@@ -6,7 +6,7 @@
           <h5 class="modal-title section-heading m-0">Update Status</h5>
           <button type="button" class="btn-close" @click="$emit('close')"></button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body p-3">
           <form @submit.prevent="save" class="row g-3">
             <div class="col-12">
               <label class="form-label" for="status">Status</label>
