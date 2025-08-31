@@ -311,7 +311,7 @@
             </div>
           </div>
 
-          <div class="col-12">
+          <div class="col-sm-6 col-lg-4 col-xl-3">
             <label class="form-label">Briefing on benefits</label>
             <div class="d-flex flex-wrap align-items-center gap-3 mb-1">
               <div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="benefYes" name="benefBrief" value="Yes" v-model="form.benefitsBriefing"><label class="form-check-label" for="benefYes">Yes</label></div>
@@ -341,7 +341,7 @@
             </div>
           </div>
 
-          <div class="col-12">
+          <div class="col-sm-6 col-lg-4 col-xl-3">
             <label class="form-label">Briefing on the Nature of job</label>
             <div class="d-flex flex-wrap align-items-center gap-3">
               <div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="jobBriefYes" name="jobBrief" value="Yes" v-model="form.natureOfJobBriefing"><label class="form-check-label" for="jobBriefYes">Yes</label></div>
