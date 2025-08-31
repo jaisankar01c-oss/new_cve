@@ -81,12 +81,8 @@
               <option>Discontinue</option>
             </select>
           </div>
-        </div>
-        <div class="row g-3 mt-0">
-          
-        </div>
-        <div class="row g-3 mt-0">
-          <div class="col-12"> <label class="form-label">Educational Category</label>
+          <div class="col-12 col-md-4"> 
+            <label class="form-label">Educational Category</label>
             <input v-model="form.educationalCategory" class="form-control" type="text" placeholder="1-12, BE, ME, CSE..." />
           </div>
         </div>
