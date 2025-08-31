@@ -111,7 +111,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, computed } from 'vue';
+import { ref, onMounted, computed, watch } from 'vue';
 import { getUsers } from '../services/users.js';
 import UserViewModal from '../components/UserViewModal.vue';
 import StatusModal from '../components/StatusModal.vue';
