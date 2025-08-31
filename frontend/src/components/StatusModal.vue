@@ -1,34 +1,35 @@
 <template>
-  <div class="modal-backdrop" @click.self="$emit('close')">
-    <div class="modal-panel">
-      <div class="modal-header">
-        <h3 class="section-title modal-title">Update Status</h3>
-        <button class="btn btn-ghost" @click="$emit('close')">Close</button>
-      </div>
-      <div class="modal-body">
-        <form @submit.prevent="save">
-          <div class="form-row">
-            <div class="col-6">
-              <label class="label" for="status">Status</label>
-              <select id="status" v-model="status" class="select-field" required>
+  <div class="modal fade show d-block nested" tabindex="-1" @click.self="$emit('close')">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title section-heading m-0">Update Status</h5>
+          <button type="button" class="btn-close" @click="$emit('close')"></button>
+        </div>
+        <div class="modal-body">
+          <form @submit.prevent="save" class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label" for="status">Status</label>
+              <select id="status" v-model="status" class="form-select" required>
                 <option value="Accepted">Accept</option>
                 <option value="Rejected">Reject</option>
                 <option value="Pending">Pending</option>
               </select>
             </div>
             <div class="col-12">
-              <label class="label" for="remarks">Remarks</label>
-              <textarea id="remarks" v-model="remarks" class="textarea-field" placeholder="Enter remarks"></textarea>
+              <label class="form-label" for="remarks">Remarks</label>
+              <textarea id="remarks" v-model="remarks" class="form-control" placeholder="Enter remarks"></textarea>
             </div>
-          </div>
-          <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Save</button>
-            <button type="button" class="btn btn-ghost" @click="$emit('close')">Cancel</button>
-          </div>
-        </form>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary">Save</button>
+              <button type="button" class="btn btn-outline-secondary" @click="$emit('close')">Cancel</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
+  <div class="modal-backdrop fade show nested"></div>
 </template>
 
 <script setup>

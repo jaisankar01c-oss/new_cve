@@ -1,31 +1,25 @@
 <template>
-  <div class="modal-backdrop" @click.self="$emit('close')">
-    <div class="modal-panel">
-      <div class="modal-header">
-        <h3 class="section-title modal-title">Submission Successful</h3>
-        <button class="btn btn-ghost" @click="$emit('close')">Close</button>
-      </div>
-      <div class="modal-body">
-        <div class="success-wrap">
-          <div class="success-icon" aria-hidden="true">✓</div>
-          <h4 class="success-title">Thank you! Your form has been submitted.</h4>
-          <p class="success-desc">We have captured your details. Our team will review and get back to you.</p>
-          <div class="form-actions">
-            <button class="btn btn-primary" @click="$emit('close')">Okay</button>
-          </div>
+  <div class="modal fade show d-block" tabindex="-1" @click.self="$emit('close')">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title section-heading m-0">Submission Successful</h5>
+          <button type="button" class="btn-close" @click="$emit('close')"></button>
+        </div>
+        <div class="modal-body text-center">
+          <div class="display-5 text-primary">✓</div>
+          <h4 class="mt-2">Thank you! Your form has been submitted.</h4>
+          <p class="text-muted mb-0">We have captured your details. Our team will review and get back to you.</p>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <button class="btn btn-primary" @click="$emit('close')">Okay</button>
         </div>
       </div>
     </div>
   </div>
+  <div class="modal-backdrop fade show"></div>
 </template>
 
 <script setup>
 const emit = defineEmits(['close']);
 </script>
-
-<style scoped>
-.success-wrap { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px; }
-.success-icon { width: 64px; height: 64px; border-radius: 50%; background: var(--brand-50); color: var(--brand-700); display: flex; align-items: center; justify-content: center; font-size: 32px; border: 1px solid var(--border); }
-.success-title { margin: 8px 0 0 0; }
-.success-desc { margin: 0; color: #6b7280; }
-</style>
