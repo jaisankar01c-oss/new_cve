@@ -83,6 +83,10 @@
           </div>
         </div>
         <div class="row g-3 mt-0">
+            <label class="form-label">Educational Category</label>
+            <input v-model="form.educationalCategory" class="form-control" type="text" />
+          </div>
+        <div class="row g-3 mt-0">
           <div class="col-md-6"><label class="form-label">Father Name</label><input v-model="form.fatherName" class="form-control" type="text" placeholder="Enter Father Name" /></div>
           <div class="col-md-6"><label class="form-label">Mother Name</label><input v-model="form.motherName" class="form-control" type="text" placeholder="Enter Mother Name" /></div>
         </div>
@@ -376,7 +380,7 @@
 import { reactive, ref } from 'vue';
 import SuccessModal from '../components/SuccessModal.vue';
 const form = reactive({
-  faceId: '', osaName: '', cveId: '', service: '', area: '', osa: '', name: '', gender: '', aadhaar: '', dob: '', maritalStatus: '', spouseName: '', siblingName: '', qualification: '', educationalStatus: '', fatherName: '', motherName: '', fatherOccupation: '', motherOccupation: '', nativePlace: '', otherIncome: '', religion: '', caste: '', permAddress: '', presAddress: '', contactPhone: '', emergencyContact: '', identMark1: '', identMark2: '', bloodGroup: '', expCompany: '', expPeriod: '', expDesignation: '', expReason: '', referenceBy: '', dateOfJoining: '', trainingArea: '', batchNo: '', trainingSkill: '', trainingFrom: '', trainingTo: '', completionDate: '', daysAttended: null, photoUrl: '', recordsAvailable: [], recordsOther: '', languagesKnown: [], languagesOther: '',
+  faceId: '', osaName: '', cveId: '', service: '', area: '', osa: '', name: '', gender: '', aadhaar: '', dob: '', maritalStatus: '', spouseName: '', siblingName: '', qualification: '', educationalStatus: '',educationalCategory:'', fatherName: '', motherName: '', fatherOccupation: '', motherOccupation: '', nativePlace: '', otherIncome: '', religion: '', caste: '', permAddress: '', presAddress: '', contactPhone: '', emergencyContact: '', identMark1: '', identMark2: '', bloodGroup: '', expCompany: '', expPeriod: '', expDesignation: '', expReason: '', referenceBy: '', dateOfJoining: '', trainingArea: '', batchNo: '', trainingSkill: '', trainingFrom: '', trainingTo: '', completionDate: '', daysAttended: null, photoUrl: '', recordsAvailable: [], recordsOther: '', languagesKnown: [], languagesOther: '',
   physicalFitness: '', eyeTestReport: '', ageProof: '', medicalReport: '', drivingLicense: '', knowledgeOfWork: '', salaryDetailsAgreement: '', orientationOSSP: '', benefitsBriefing: '', benefitsStatutory: '', benefitsPPE: '', benefitsESIPF: '', benefitsRewards: '', natureOfJobBriefing: '', trainingDecision: '', comments: '', filledBy: '', osaSignature: ''
 });
 
