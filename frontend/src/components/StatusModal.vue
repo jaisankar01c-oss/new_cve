@@ -1,5 +1,5 @@
 <template>
-  <div class="modal fade show d-block" tabindex="-1" @click.self="$emit('close')">
+  <div class="modal fade show d-block nested" tabindex="-1" @click.self="$emit('close')">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -29,7 +29,7 @@
       </div>
     </div>
   </div>
-  <div class="modal-backdrop fade show"></div>
+  <div class="modal-backdrop fade show nested"></div>
 </template>
 
 <script setup>
