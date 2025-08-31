@@ -39,7 +39,7 @@
 
     <section class="card">
       <div class="card-body">
-        <h3 class="h6 text-primary mb-3">Users</h3>
+        <h3 class="section-heading subheading-large mb-3">Users</h3>
         <table class="table table-hover align-middle">
           <thead>
             <tr>
