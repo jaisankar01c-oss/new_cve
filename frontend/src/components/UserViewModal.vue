@@ -6,7 +6,7 @@
           <h5 class="modal-title section-heading m-0">Trainee Details</h5>
           <button type="button" class="btn-close" aria-label="Close" @click="$emit('close')"></button>
         </div>
-        <div class="modal-body p-3">
+        <div class="modal-body p-4">
           <!-- Profile summary -->
           <div class="profile-summary d-flex align-items-center gap-3 mb-4">
             <template v-if="user.photoUrl">
