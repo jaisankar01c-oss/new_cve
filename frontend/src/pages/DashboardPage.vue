@@ -39,7 +39,12 @@
 
     <section class="card border-0 shadow-none bg-transparent p-0">
       <div class="card-body p-0">
-        <h4 class="section-heading mb-3 mt-4">Trainees</h4>
+        <div class="d-flex align-items-center justify-content-between mt-4 mb-2">
+          <h4 class="section-heading m-0">Trainees</h4>
+          <router-link to="/trainee-form" class="btn btn-primary btn-sm d-inline-flex align-items-center gap-2">
+            <i class="bi bi-plus-lg"></i><span>New</span>
+          </router-link>
+        </div>
         <div class="row g-2 mb-3">
           <div class="col-12 col-md-3">
             <input v-model="query" type="text" class="form-control small" placeholder="Search by FACE ID or Name" />
