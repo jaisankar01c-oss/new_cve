@@ -1,6 +1,6 @@
 <template>
   <div class="modal fade show d-block nested" tabindex="-1" @click.self="$emit('close')">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-dialog modal-md modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title section-heading m-0">Update Status</h5>
