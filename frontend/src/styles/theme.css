@@ -40,3 +40,6 @@ textarea.form-control { min-height: 84px; }
 /* Modal stacking for nested modals (e.g., Update inside Details) */
 .modal.nested { z-index: 1065; }
 .modal-backdrop.nested { z-index: 1060; }
+
+/* Avatar utilities */
+.avatar-lg { width: 96px; height: 96px; object-fit: cover; }
