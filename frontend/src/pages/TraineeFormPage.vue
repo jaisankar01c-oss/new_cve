@@ -83,9 +83,10 @@
           </div>
         </div>
         <div class="row g-3 mt-0">
-            <label class="form-label">Educational Category</label>
-            <input v-model="form.educationalCategory" class="form-control" type="text" />
+          <div class="col-12"> <label class="form-label">Educational Category</label>
+            <input v-model="form.educationalCategory" class="form-control" type="text" placeholder="1-12, BE, ME, CSE..." />
           </div>
+        </div>
         <div class="row g-3 mt-0">
           <div class="col-md-6"><label class="form-label">Father Name</label><input v-model="form.fatherName" class="form-control" type="text" placeholder="Enter Father Name" /></div>
           <div class="col-md-6"><label class="form-label">Mother Name</label><input v-model="form.motherName" class="form-control" type="text" placeholder="Enter Mother Name" /></div>
