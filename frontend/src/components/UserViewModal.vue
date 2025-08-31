@@ -1,7 +1,7 @@
 <template>
   <div class="modal fade show d-block" tabindex="-1" @click.self="$emit('close')">
     <div class="modal-dialog modal-xl modal-dialog-centered">
-      <div class="modal-content p-4">
+      <div class="modal-content p-3">
         <div class="modal-header">
           <h5 class="modal-title section-heading m-0">Trainee Details</h5>
           <button type="button" class="btn-close" aria-label="Close" @click="$emit('close')"></button>
