@@ -37,6 +37,7 @@ const router = useRouter();
 const onSubmit = () => {
   if (username.value && password.value) {
     localStorage.setItem('auth', 'true');
+    localStorage.setItem('adminName', username.value);
     router.push('/dashboard');
   }
 };
