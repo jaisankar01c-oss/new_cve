@@ -4,7 +4,7 @@
       <div class="col-12 col-sm-10 col-md-6 col-lg-4">
         <div class="card shadow-sm">
           <div class="card-body">
-            <h2 class="h5 text-center text-primary mb-1">Login</h2>
+            <h2 class="section-heading subheading-large text-center mb-1">Login</h2>
             <p class="text-center text-muted mb-3">Please provide login to access users.</p>
             <form @submit.prevent="onSubmit" class="vstack gap-3">
               <div>
