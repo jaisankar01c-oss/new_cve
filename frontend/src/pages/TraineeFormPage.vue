@@ -1,58 +1,55 @@
 <template>
-  <div class="container-flow">
-    <div class="card-surface card-padding">
-      <div class="form-title-wrap">
-        <div class="brand-mark" aria-hidden="true">CVE</div>
-        <h2 class="section-title form-title">Trainee Data &amp; Screening Form</h2>
-      </div>
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <h2 class="h5 text-center text-primary mb-3">Trainee Data &amp; Screening Form</h2>
       <form @submit.prevent="submit">
-        <h4 class="section-title">Official Information</h4>
-        <div class="form-row">
-          <div class="col-3">
-            <label class="label">FACE ID</label>
-            <input v-model="form.faceId" class="input-field" type="text" placeholder="Enter FACE ID" />
+        <h4 class="h6 text-primary">Official Information</h4>
+        <div class="row g-3">
+          <div class="col-md-3">
+            <label class="form-label">FACE ID</label>
+            <input v-model="form.faceId" class="form-control" type="text" placeholder="Enter FACE ID" />
           </div>
-          <div class="col-3">
-            <label class="label">Name of the OSA</label>
-            <input v-model="form.osaName" class="input-field" type="text" placeholder="Enter OSA Name" />
+          <div class="col-md-3">
+            <label class="form-label">Name of the OSA</label>
+            <input v-model="form.osaName" class="form-control" type="text" placeholder="Enter OSA Name" />
           </div>
-          <div class="col-3">
-            <label class="label">CVE ID No</label>
-            <input v-model="form.cveId" class="input-field" type="text" placeholder="Enter CVE ID No" />
+          <div class="col-md-3">
+            <label class="form-label">CVE ID No</label>
+            <input v-model="form.cveId" class="form-control" type="text" placeholder="Enter CVE ID No" />
           </div>
-          <div class="col-3">
-            <label class="label">Nature of Service</label>
-            <input v-model="form.service" class="input-field" type="text" placeholder="Enter Nature of Service" />
+          <div class="col-md-3">
+            <label class="form-label">Nature of Service</label>
+            <input v-model="form.service" class="form-control" type="text" placeholder="Enter Nature of Service" />
           </div>
         </div>
 
-        <h4 class="section-title" style="margin-top:10px">Personal Information</h4>
-        <div class="form-row">
-          <div class="col-4"><label class="label">Name</label><input v-model="form.name" class="input-field" type="text" placeholder="Enter Name" /></div>
-          <div class="col-4"><label class="label">Gender</label>
-            <select v-model="form.gender" class="select-field">
+        <h4 class="h6 text-primary mt-3">Personal Information</h4>
+        <div class="row g-3">
+          <div class="col-md-4"><label class="form-label">Name</label><input v-model="form.name" class="form-control" type="text" placeholder="Enter Name" /></div>
+          <div class="col-md-4"><label class="form-label">Gender</label>
+            <select v-model="form.gender" class="form-select">
               <option value="">Select</option>
               <option>Male</option>
               <option>Female</option>
               <option>Transgender</option>
             </select>
           </div>
-          <div class="col-4"><label class="label">Aadhaar No</label><input v-model="form.aadhaar" class="input-field" type="text" placeholder="Enter Aadhaar Number" /></div>
+          <div class="col-md-4"><label class="form-label">Aadhaar No</label><input v-model="form.aadhaar" class="form-control" type="text" placeholder="Enter Aadhaar Number" /></div>
         </div>
-        <div class="form-row">
-          <div class="col-4"><label class="label">Date of Birth</label><input v-model="form.dob" class="input-field" type="date" /></div>
-          <div class="col-4"><label class="label">Marital Status</label>
-            <select v-model="form.maritalStatus" class="select-field">
+        <div class="row g-3 mt-0">
+          <div class="col-md-4"><label class="form-label">Date of Birth</label><input v-model="form.dob" class="form-control" type="date" /></div>
+          <div class="col-md-4"><label class="form-label">Marital Status</label>
+            <select v-model="form.maritalStatus" class="form-select">
               <option value="">Select</option>
               <option>Married</option>
               <option>Single</option>
             </select>
           </div>
-          <div class="col-4"><label class="label">Spouse Name</label><input v-model="form.spouseName" class="input-field" type="text" placeholder="Enter Spouse Name" /></div>
+          <div class="col-md-4"><label class="form-label">Spouse Name</label><input v-model="form.spouseName" class="form-control" type="text" placeholder="Enter Spouse Name" /></div>
         </div>
-        <div class="form-row">
-          <div class="col-12"><label class="label">Educational Qualification</label>
-            <select v-model="form.qualification" class="select-field">
+        <div class="row g-3 mt-0">
+          <div class="col-12"><label class="form-label">Educational Qualification</label>
+            <select v-model="form.qualification" class="form-select">
               <option value="">Select Qualification</option>
               <option>School</option>
               <option>ITI</option>
@@ -61,21 +58,21 @@
             </select>
           </div>
         </div>
-        <div class="form-row">
-          <div class="col-6"><label class="label">Father Name</label><input v-model="form.fatherName" class="input-field" type="text" placeholder="Enter Father Name" /></div>
-          <div class="col-6"><label class="label">Mother Name</label><input v-model="form.motherName" class="input-field" type="text" placeholder="Enter Mother Name" /></div>
+        <div class="row g-3 mt-0">
+          <div class="col-md-6"><label class="form-label">Father Name</label><input v-model="form.fatherName" class="form-control" type="text" placeholder="Enter Father Name" /></div>
+          <div class="col-md-6"><label class="form-label">Mother Name</label><input v-model="form.motherName" class="form-control" type="text" placeholder="Enter Mother Name" /></div>
         </div>
-        <div class="form-row">
-          <div class="col-6"><label class="label">Religion</label>
-            <select v-model="form.religion" class="select-field">
+        <div class="row g-3 mt-0">
+          <div class="col-md-6"><label class="form-label">Religion</label>
+            <select v-model="form.religion" class="form-select">
               <option value="">Select Religion</option>
               <option>Hindu</option>
               <option>Christian</option>
               <option>Muslim</option>
             </select>
           </div>
-          <div class="col-6"><label class="label">Caste</label>
-            <select v-model="form.caste" class="select-field">
+          <div class="col-md-6"><label class="form-label">Caste</label>
+            <select v-model="form.caste" class="form-select">
               <option value="">Select Caste</option>
               <option>SC</option>
               <option>ST</option>
@@ -88,41 +85,41 @@
           </div>
         </div>
 
-        <h4 class="section-title" style="margin-top:10px">Contact Details</h4>
-        <div class="form-row"><div class="col-12"><label class="label">Permanent Address</label><textarea v-model="form.permAddress" class="textarea-field" rows="2" placeholder="Enter Permanent Address"></textarea></div></div>
-        <div class="form-row"><div class="col-12"><label class="label">Present Address</label><textarea v-model="form.presAddress" class="textarea-field" rows="2" placeholder="Enter Present Address"></textarea></div></div>
-        <div class="form-row">
-          <div class="col-6"><label class="label">Contact Telephone Number</label><input v-model="form.contactPhone" class="input-field" type="text" placeholder="Enter Phone Number" /></div>
-          <div class="col-6"><label class="label">Emergency Contact (First Information Given to)</label><input v-model="form.emergencyContact" class="input-field" type="text" placeholder="Enter Emergency Contact Name" /></div>
+        <h4 class="h6 text-primary mt-3">Contact Details</h4>
+        <div class="row g-3">
+          <div class="col-12"><label class="form-label">Permanent Address</label><textarea v-model="form.permAddress" class="form-control" rows="2" placeholder="Enter Permanent Address"></textarea></div>
+          <div class="col-12"><label class="form-label">Present Address</label><textarea v-model="form.presAddress" class="form-control" rows="2" placeholder="Enter Present Address"></textarea></div>
+          <div class="col-md-6"><label class="form-label">Contact Telephone Number</label><input v-model="form.contactPhone" class="form-control" type="text" placeholder="Enter Phone Number" /></div>
+          <div class="col-md-6"><label class="form-label">Emergency Contact (First Information Given to)</label><input v-model="form.emergencyContact" class="form-control" type="text" placeholder="Enter Emergency Contact Name" /></div>
         </div>
 
-        <h4 class="section-title" style="margin-top:10px">Medical Details</h4>
-        <div class="form-row">
-          <div class="col-6"><label class="label">Personal Identification Marks</label><input v-model="form.identMark1" class="input-field" type="text" placeholder="Mark 1" /><input v-model="form.identMark2" class="input-field" type="text" placeholder="Mark 2" style="margin-top:8px" /></div>
-          <div class="col-6"><label class="label">Blood Group</label><input v-model="form.bloodGroup" class="input-field" type="text" placeholder="Enter Blood Group" /></div>
+        <h4 class="h6 text-primary mt-3">Medical Details</h4>
+        <div class="row g-3">
+          <div class="col-md-6"><label class="form-label">Personal Identification Marks</label><input v-model="form.identMark1" class="form-control" type="text" placeholder="Mark 1" /><input v-model="form.identMark2" class="form-control mt-2" type="text" placeholder="Mark 2" /></div>
+          <div class="col-md-6"><label class="form-label">Blood Group</label><input v-model="form.bloodGroup" class="form-control" type="text" placeholder="Enter Blood Group" /></div>
         </div>
 
-        <h4 class="section-title" style="margin-top:10px">Experience & Training</h4>
-        <div class="form-row">
-          <div class="col-12"><label class="label">Industrial Experience</label><input v-model="form.expCompany" class="input-field" type="text" placeholder="Company Name" /><input v-model="form.expPeriod" class="input-field" type="text" placeholder="Period" style="margin-top:8px" /><input v-model="form.expDesignation" class="input-field" type="text" placeholder="Designation" style="margin-top:8px" /><input v-model="form.expReason" class="input-field" type="text" placeholder="Reason for Leaving" style="margin-top:8px" /></div>
+        <h4 class="h6 text-primary mt-3">Experience &amp; Training</h4>
+        <div class="row g-3">
+          <div class="col-12"><label class="form-label">Industrial Experience</label><input v-model="form.expCompany" class="form-control" type="text" placeholder="Company Name" /><input v-model="form.expPeriod" class="form-control mt-2" type="text" placeholder="Period" /><input v-model="form.expDesignation" class="form-control mt-2" type="text" placeholder="Designation" /><input v-model="form.expReason" class="form-control mt-2" type="text" placeholder="Reason for Leaving" /></div>
         </div>
-        <div class="form-row">
-          <div class="col-4"><label class="label">Reference By</label><input v-model="form.referenceBy" class="input-field" type="text" placeholder="Reference Name" /></div>
-          <div class="col-4"><label class="label">Date of Joining</label><input v-model="form.dateOfJoining" class="input-field" type="date" /></div>
-          <div class="col-4"><label class="label">Area of Training</label><input v-model="form.trainingArea" class="input-field" type="text" placeholder="Enter Training Area" /></div>
+        <div class="row g-3 mt-0">
+          <div class="col-md-4"><label class="form-label">Reference By</label><input v-model="form.referenceBy" class="form-control" type="text" placeholder="Reference Name" /></div>
+          <div class="col-md-4"><label class="form-label">Date of Joining</label><input v-model="form.dateOfJoining" class="form-control" type="date" /></div>
+          <div class="col-md-4"><label class="form-label">Area of Training</label><input v-model="form.trainingArea" class="form-control" type="text" placeholder="Enter Training Area" /></div>
         </div>
-        <div class="form-row">
-          <div class="col-3"><label class="label">Batch No</label><input v-model="form.batchNo" class="input-field" type="text" placeholder="Batch No" /></div>
-          <div class="col-3"><label class="label">Training Skill</label><input v-model="form.trainingSkill" class="input-field" type="text" placeholder="Skill" /></div>
-          <div class="col-3"><label class="label">Training Period (From)</label><input v-model="form.trainingFrom" class="input-field" type="date" /></div>
-          <div class="col-3"><label class="label">Training Period (To)</label><input v-model="form.trainingTo" class="input-field" type="date" /></div>
+        <div class="row g-3 mt-0">
+          <div class="col-md-3"><label class="form-label">Batch No</label><input v-model="form.batchNo" class="form-control" type="text" placeholder="Batch No" /></div>
+          <div class="col-md-3"><label class="form-label">Training Skill</label><input v-model="form.trainingSkill" class="form-control" type="text" placeholder="Skill" /></div>
+          <div class="col-md-3"><label class="form-label">Training Period (From)</label><input v-model="form.trainingFrom" class="form-control" type="date" /></div>
+          <div class="col-md-3"><label class="form-label">Training Period (To)</label><input v-model="form.trainingTo" class="form-control" type="date" /></div>
         </div>
-        <div class="form-row">
-          <div class="col-6"><label class="label">Date of Completion</label><input v-model="form.completionDate" class="input-field" type="date" /></div>
-          <div class="col-6"><label class="label">No of Days Attended</label><input v-model.number="form.daysAttended" class="input-field" type="number" placeholder="Enter No. of Days" /></div>
+        <div class="row g-3 mt-0">
+          <div class="col-md-6"><label class="form-label">Date of Completion</label><input v-model="form.completionDate" class="form-control" type="date" /></div>
+          <div class="col-md-6"><label class="form-label">No of Days Attended</label><input v-model.number="form.daysAttended" class="form-control" type="number" placeholder="Enter No. of Days" /></div>
         </div>
 
-        <div style="display:flex; justify-content:center; margin-top:12px;">
+        <div class="d-flex justify-content-center mt-3">
           <button class="btn btn-primary" type="submit">Submit</button>
         </div>
       </form>
@@ -144,9 +141,3 @@ const submit = () => {
   showSuccess.value = true;
 };
 </script>
-
-<style scoped>
-.form-title-wrap { display: flex; flex-direction: column; align-items: center; gap: 6px; margin-bottom: 6px; }
-.form-title { font-size: 20px; text-align: center; }
-.brand-mark { width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; color: var(--brand-700); background: var(--brand-50); border: 1px solid var(--border); box-shadow: 0 2px 8px rgba(0,0,0,.04); }
-</style>

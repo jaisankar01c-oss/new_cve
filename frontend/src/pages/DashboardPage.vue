@@ -1,50 +1,68 @@
 <template>
-  <div class="container-flow">
-    <section class="card-surface card-padding" style="margin-bottom:14px;">
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-label">Total Users</div>
-          <div class="stat-value">{{ users.length }}</div>
+  <div>
+    <section class="mb-3">
+      <div class="row g-3">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <div class="text-muted fw-semibold">Total Users</div>
+              <div class="fs-3 fw-bold text-primary">{{ users.length }}</div>
+            </div>
+          </div>
         </div>
-        <div class="stat-card">
-          <div class="stat-label">Accepted</div>
-          <div class="stat-value">{{ counts.accepted }}</div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <div class="text-muted fw-semibold">Accepted</div>
+              <div class="fs-3 fw-bold text-primary">{{ counts.accepted }}</div>
+            </div>
+          </div>
         </div>
-        <div class="stat-card">
-          <div class="stat-label">Pending</div>
-          <div class="stat-value">{{ counts.pending }}</div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <div class="text-muted fw-semibold">Pending</div>
+              <div class="fs-3 fw-bold text-primary">{{ counts.pending }}</div>
+            </div>
+          </div>
         </div>
-        <div class="stat-card">
-          <div class="stat-label">Rejected</div>
-          <div class="stat-value">{{ counts.rejected }}</div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <div class="text-muted fw-semibold">Rejected</div>
+              <div class="fs-3 fw-bold text-primary">{{ counts.rejected }}</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="card-surface card-padding">
-      <h3 class="section-title">Users</h3>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>FACE ID</th>
-            <th>Name</th>
-            <th>Mobile</th>
-            <th>Gender</th>
-            <th style="width: 96px;">Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="u in users" :key="u.faceId">
-            <td>{{ u.faceId }}</td>
-            <td>{{ u.name }}</td>
-            <td>{{ u.mobile }}</td>
-            <td>{{ u.gender }}</td>
-            <td>
-              <button class="btn btn-ghost" @click="openView(u)">View</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+    <section class="card">
+      <div class="card-body">
+        <h3 class="h6 text-primary mb-3">Users</h3>
+        <table class="table table-hover align-middle">
+          <thead>
+            <tr>
+              <th>FACE ID</th>
+              <th>Name</th>
+              <th>Mobile</th>
+              <th>Gender</th>
+              <th style="width: 112px;">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="u in users" :key="u.faceId">
+              <td>{{ u.faceId }}</td>
+              <td>{{ u.name }}</td>
+              <td>{{ u.mobile }}</td>
+              <td>{{ u.gender }}</td>
+              <td>
+                <button class="btn btn-outline-primary btn-sm" @click="openView(u)">View</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
     <UserViewModal v-if="selected" :user="selected" @close="selected=null" @open-status="openStatus" />
@@ -77,11 +95,3 @@ const onStatusSaved = (updated) => {
   statusTarget.value = null;
 };
 </script>
-
-<style scoped>
-.stats-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
-.stat-card { background: var(--brand-50); border: 1px solid var(--border); border-radius: 14px; padding: 16px; }
-.stat-label { color: #6b7280; font-weight: 600; }
-.stat-value { font-size: 28px; font-weight: 700; color: var(--brand-700); }
-@media (max-width: 900px){ .stats-grid { grid-template-columns: 1fr; } }
-</style>

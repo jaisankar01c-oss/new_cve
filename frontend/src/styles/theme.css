@@ -1,23 +1,10 @@
-/* Global Theme derived from logo colors (soft pink & white) */
-:root {
-  --brand-50: #fff5f9;
-  --brand-100: #ffe7f0;
-  --brand-300: #f9cfe0;
-  --brand-500: #f4a6c1;
-  --brand-600: #ea88ae;
-  --brand-700: #d96a94;
-  --text-900: #1a1a1a;
-  --bg: #fff9fc;
-  --card: #ffffff;
-  --border: #f2d4e0;
-  --success: #22c55e;
-  --danger: #ef4444;
-}
-
 html, body, #app { height: 100%; }
 * { box-sizing: border-box; }
-body { margin: 0; color: var(--text-900); background: var(--bg); }
-.section-title { color: var(--brand-700); margin: 0 0 8px 0; font-size: 16px; font-weight: 700; }
-.label { display: inline-block; margin: 0 0 6px 0; font-weight: 600; }
-.helper { color: #6b7280; font-size: 12px; }
-.link { color: var(--brand-700); text-decoration: none; font-weight: 600; }
+body { margin: 0; font-family: var(--font-family); color: var(--color-dark); background: var(--color-light); }
+
+/* Bootstrap color theming via CSS variables */
+.bg-primary, .text-bg-primary { background-color: var(--color-primary) !important; }
+.btn-primary { background-color: var(--color-primary) !important; border-color: var(--color-primary) !important; }
+.btn-primary:hover { background-color: var(--color-primary-dark) !important; border-color: var(--color-primary-dark) !important; }
+.text-primary { color: var(--color-primary) !important; }
+.border { border-color: var(--color-border) !important; }
