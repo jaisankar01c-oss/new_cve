@@ -10,7 +10,7 @@
             <div v-if="errorMsg" class="alert small alert-danger py-2 mb-3" role="alert">{{ errorMsg }}</div>
             <form @submit.prevent="onSubmit" class="vstack gap-3">
               <div>
-                <label class="form-label" for="username">User name</label>
+                <label class="form-label" for="username">Username</label>
                 <input id="username" v-model.trim="username" class="form-control" type="text" autocomplete="username" required />
               </div>
               <div>
