@@ -1,10 +1,10 @@
 <template>
-  <div class="card shadow-sm">
-    <div class="card-body">
-      <img class="brand-logo" src="https://cdn.builder.io/api/v1/image/assets%2Fc98c532ea1554d2d9b237baf37efdf95%2F1bd2ceab768347d2a4c36137838a0f37?format=webp&width=800" alt="CVE & WD Logo" loading="lazy" />
-      <h2 class="display-6 text-center text-primary mb-3">Trainee Data &amp; Screening Form</h2>
-      <form @submit.prevent="submit">
-        <h4 class="section-heading text-secondary">Official Information</h4>
+  <div>
+    <img class="brand-logo" src="https://cdn.builder.io/api/v1/image/assets%2Fc98c532ea1554d2d9b237baf37efdf95%2F1bd2ceab768347d2a4c36137838a0f37?format=webp&width=800" alt="CVE & WD Logo" loading="lazy" />
+    <h2 class="display-6 text-center text-primary mb-3">Trainee Data &amp; Screening Form</h2>
+    <form @submit.prevent="submit">
+      <section class="section-divider">
+        <h4 class="detail-title">Official Information</h4>
         <div class="row g-3">
           <div class="col-md-3">
             <label class="form-label">FACE ID</label>
@@ -23,8 +23,10 @@
             <input v-model="form.service" class="form-control" type="text" placeholder="Enter Nature of Service" />
           </div>
         </div>
+      </section>
 
-        <h4 class="section-heading text-secondary mt-3">Personal Information</h4>
+      <section class="section-divider">
+        <h4 class="detail-title">Personal Information</h4>
         <div class="row g-3">
           <div class="col-md-4"><label class="form-label">Name</label><input v-model="form.name" class="form-control" type="text" placeholder="Enter Name" /></div>
           <div class="col-md-4"><label class="form-label">Gender</label>
@@ -63,12 +65,17 @@
           <div class="col-md-6"><label class="form-label">Father Name</label><input v-model="form.fatherName" class="form-control" type="text" placeholder="Enter Father Name" /></div>
           <div class="col-md-6"><label class="form-label">Mother Name</label><input v-model="form.motherName" class="form-control" type="text" placeholder="Enter Mother Name" /></div>
         </div>
-        <div class="row g-3 mt-0">
+        <div class="row g-3 mt-0 align-items-end">
           <div class="col-md-4">
             <label class="form-label">Photo</label>
             <input class="form-control" type="file" accept="image/*" @change="onPhotoChange" />
-            <div v-if="form.photoUrl" class="mt-2">
-              <img :src="form.photoUrl" alt="Preview" class="avatar-lg rounded border" />
+            <div class="mt-2 d-flex align-items-center gap-2">
+              <template v-if="form.photoUrl">
+                <img :src="form.photoUrl" alt="Preview" class="avatar-lg rounded border" />
+              </template>
+              <div v-else class="avatar-lg rounded-circle border d-flex align-items-center justify-content-center avatar-fallback">
+                <i class="bi bi-person fs-2 text-muted"></i>
+              </div>
             </div>
           </div>
         </div>
@@ -94,22 +101,28 @@
             </select>
           </div>
         </div>
+      </section>
 
-        <h4 class="section-heading text-secondary mt-3">Contact Details</h4>
+      <section class="section-divider">
+        <h4 class="detail-title">Contact Details</h4>
         <div class="row g-3">
           <div class="col-12"><label class="form-label">Permanent Address</label><textarea v-model="form.permAddress" class="form-control" rows="2" placeholder="Enter Permanent Address"></textarea></div>
           <div class="col-12"><label class="form-label">Present Address</label><textarea v-model="form.presAddress" class="form-control" rows="2" placeholder="Enter Present Address"></textarea></div>
           <div class="col-md-6"><label class="form-label">Contact Telephone Number</label><input v-model="form.contactPhone" class="form-control" type="text" placeholder="Enter Phone Number" /></div>
           <div class="col-md-6"><label class="form-label">Emergency Contact (First Information Given to)</label><input v-model="form.emergencyContact" class="form-control" type="text" placeholder="Enter Emergency Contact Name" /></div>
         </div>
+      </section>
 
-        <h4 class="section-heading text-secondary mt-3">Medical Details</h4>
+      <section class="section-divider">
+        <h4 class="detail-title">Medical Details</h4>
         <div class="row g-3">
           <div class="col-md-6"><label class="form-label">Personal Identification Marks</label><input v-model="form.identMark1" class="form-control" type="text" placeholder="Mark 1" /><input v-model="form.identMark2" class="form-control mt-2" type="text" placeholder="Mark 2" /></div>
           <div class="col-md-6"><label class="form-label">Blood Group</label><input v-model="form.bloodGroup" class="form-control" type="text" placeholder="Enter Blood Group" /></div>
         </div>
+      </section>
 
-        <h4 class="section-heading text-secondary mt-3">Experience &amp; Training</h4>
+      <section class="section-divider">
+        <h4 class="detail-title">Experience &amp; Training</h4>
         <div class="row g-3">
           <div class="col-12"><label class="form-label">Industrial Experience</label><input v-model="form.expCompany" class="form-control" type="text" placeholder="Company Name" /><input v-model="form.expPeriod" class="form-control mt-2" type="text" placeholder="Period" /><input v-model="form.expDesignation" class="form-control mt-2" type="text" placeholder="Designation" /><input v-model="form.expReason" class="form-control mt-2" type="text" placeholder="Reason for Leaving" /></div>
         </div>
@@ -128,13 +141,13 @@
           <div class="col-md-6"><label class="form-label">Date of Completion</label><input v-model="form.completionDate" class="form-control" type="date" /></div>
           <div class="col-md-6"><label class="form-label">No of Days Attended</label><input v-model.number="form.daysAttended" class="form-control" type="number" placeholder="Enter No. of Days" /></div>
         </div>
+      </section>
 
-        <div class="d-flex justify-content-center mt-3">
-          <button class="btn btn-primary" type="submit">Submit</button>
-        </div>
-      </form>
-      <SuccessModal v-if="showSuccess" @close="showSuccess=false" />
-    </div>
+      <div class="d-flex justify-content-center mt-3">
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </div>
+    </form>
+    <SuccessModal v-if="showSuccess" @close="showSuccess=false" />
   </div>
 </template>
 
@@ -159,3 +172,9 @@ const submit = () => {
   showSuccess.value = true;
 };
 </script>
+
+<style scoped>
+.detail-title { font-weight: var(--font-weight-semibold); color: var(--color-dark); margin-bottom: .5rem; }
+.section-divider { padding-top: .5rem; margin-top: 1rem; border-top: 1px solid var(--color-border); }
+.avatar-fallback { background: var(--color-light); }
+</style>
