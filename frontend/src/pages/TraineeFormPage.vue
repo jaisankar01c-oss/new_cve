@@ -72,9 +72,8 @@
               <option>Degree</option>
             </select>
           </div>
-        </div>
-        <div class="row g-3 mt-0">
-          <div class="col-12"><label class="form-label">Educational Status</label>
+          <div class="col-12 col-md-4">
+            <label class="form-label">Educational Status</label>
             <select v-model="form.educationalStatus" class="form-select">
               <option value="">Select Status</option>
               <option>Pass</option>
@@ -82,6 +81,9 @@
               <option>Discontinue</option>
             </select>
           </div>
+        </div>
+        <div class="row g-3 mt-0">
+          
         </div>
         <div class="row g-3 mt-0">
           <div class="col-12"> <label class="form-label">Educational Category</label>
