@@ -41,7 +41,7 @@
       <div class="card-body p-0">
         <div class="d-flex align-items-center justify-content-between mt-4 mb-2">
           <h4 class="section-heading m-0">Trainees</h4>
-          <router-link to="/trainee-form" class="btn btn-primary btn-sm d-inline-flex align-items-center gap-2">
+          <router-link to="/trainee-form" class="new-button btn btn-primary btn-sm d-inline-flex align-items-center gap-2">
             <i class="bi bi-plus-lg"></i><span>New</span>
           </router-link>
         </div>
@@ -203,3 +203,7 @@ const onStatusSaved = (updated) => {
   statusTarget.value = null;
 };
 </script>
+
+<style scoped>
+
+</style>
