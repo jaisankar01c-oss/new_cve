@@ -39,7 +39,7 @@ textarea.form-control { min-height: 84px; }
 .border { border-color: var(--color-border) !important; }
 
 /* Branding */
-.brand-logo { display:block; margin:0 auto .5rem auto; height:50px; width:auto; }
+.brand-logo { display:block; margin:0 auto .5rem auto; height:40px; width:auto;border-radius: 8px; }
 
 /* Subheading utility */
 .subheading-muted { font-size: var(--font-size-sm); color: var(--color-muted) !important; }
