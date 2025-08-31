@@ -349,7 +349,7 @@
             </div>
           </div>
 
-          <div class="col-12 text-center mt-3">
+          <div class="col-12 d-flex justify-content-center mt-3">
             <div class="d-flex flex-wrap align-items-center gap-4">
               <div class="form-check">
                 <input class="form-check-input" type="radio" id="decisionTaken" name="trainingDecision" value="Taken for Training" v-model="form.trainingDecision">
