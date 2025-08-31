@@ -37,7 +37,7 @@
       </div>
     </section>
 
-    <section class="card">
+    <section class="card border-0">
       <div class="card-body">
         <h3 class="section-heading subheading-large mb-3">Users</h3>
         <div class="row g-2 mb-3">
