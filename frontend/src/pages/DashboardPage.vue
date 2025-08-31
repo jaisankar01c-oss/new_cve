@@ -124,6 +124,7 @@ const query = ref('');
 const statusFilter = ref('');
 
 onMounted(async () => { users.value = await getUsers(); });
+watch([query, statusFilter], () => { currentPage.value = 1; });
 const counts = computed(() => {
   const accepted = users.value.filter(u => u.status === 'Accepted').length;
   const pending = users.value.filter(u => u.status === 'Pending').length;
