@@ -23,6 +23,16 @@
             <input v-model="form.service" class="form-control" type="text" placeholder="Enter Nature of Service" />
           </div>
         </div>
+        <div class="row g-3 mt-0">
+          <div class="col-md-3">
+            <label class="form-label">Area</label>
+            <input v-model="form.area" class="form-control" type="text" placeholder="Enter Area" />
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">OSA</label>
+            <input v-model="form.osa" class="form-control" type="text" placeholder="Enter OSA" />
+          </div>
+        </div>
       </section>
 
       <section class="section-divider">
@@ -48,7 +58,8 @@
               <option>Single</option>
             </select>
           </div>
-          <div class="col-md-4"><label class="form-label">Spouse Name</label><input v-model="form.spouseName" class="form-control" type="text" placeholder="Enter Spouse Name" /></div>
+          <div class="col-md-4" v-if="form.maritalStatus==='Married'"><label class="form-label">Spouse Name</label><input v-model="form.spouseName" class="form-control" type="text" placeholder="Enter Spouse Name" /></div>
+          <div class="col-md-4" v-else-if="form.maritalStatus==='Single'"><label class="form-label">Sibling Name</label><input v-model="form.siblingName" class="form-control" type="text" placeholder="Enter Sibling Name" /></div>
         </div>
         <div class="row g-3 mt-0">
           <div class="col-12"><label class="form-label">Educational Qualification</label>
@@ -62,8 +73,24 @@
           </div>
         </div>
         <div class="row g-3 mt-0">
+          <div class="col-12"><label class="form-label">Educational Status</label>
+            <select v-model="form.educationalStatus" class="form-select">
+              <option value="">Select Status</option>
+              <option>Pass</option>
+              <option>Fail</option>
+              <option>Discontinue</option>
+            </select>
+          </div>
+        </div>
+        <div class="row g-3 mt-0">
           <div class="col-md-6"><label class="form-label">Father Name</label><input v-model="form.fatherName" class="form-control" type="text" placeholder="Enter Father Name" /></div>
           <div class="col-md-6"><label class="form-label">Mother Name</label><input v-model="form.motherName" class="form-control" type="text" placeholder="Enter Mother Name" /></div>
+        </div>
+        <div class="row g-3 mt-0">
+          <div class="col-md-3"><label class="form-label">Father Occupation</label><input v-model="form.fatherOccupation" class="form-control" type="text" placeholder="Enter Father Occupation" /></div>
+          <div class="col-md-3"><label class="form-label">Mother Occupation</label><input v-model="form.motherOccupation" class="form-control" type="text" placeholder="Enter Mother Occupation" /></div>
+          <div class="col-md-3"><label class="form-label">Native Place</label><input v-model="form.nativePlace" class="form-control" type="text" placeholder="Enter Native Place" /></div>
+          <div class="col-md-3"><label class="form-label">Other Sources of Income (if any)</label><input v-model="form.otherIncome" class="form-control" type="text" placeholder="Specify if any" /></div>
         </div>
         <div class="row g-3 mt-0 align-items-end">
           <div class="col-md-4">
@@ -99,6 +126,70 @@
               <option>FC</option>
               <option>General</option>
             </select>
+          </div>
+        </div>
+        <div class="row g-3 mt-0">
+          <div class="col-12">
+            <label class="form-label">List of Records Available</label>
+            <div class="d-flex flex-wrap align-items-center gap-3">
+              <div class="form-check form-check-inline me-3">
+                <input class="form-check-input" type="checkbox" id="recVoter" value="Voter ID" v-model="form.recordsAvailable">
+                <label class="form-check-label" for="recVoter">Voter ID</label>
+              </div>
+              <div class="form-check form-check-inline me-3">
+                <input class="form-check-input" type="checkbox" id="recTC" value="School Transfer Certificate" v-model="form.recordsAvailable">
+                <label class="form-check-label" for="recTC">School Transfer Certificate</label>
+              </div>
+              <div class="form-check form-check-inline me-3">
+                <input class="form-check-input" type="checkbox" id="recPAN" value="PAN Card" v-model="form.recordsAvailable">
+                <label class="form-check-label" for="recPAN">PAN Card</label>
+              </div>
+              <div class="form-check form-check-inline me-3">
+                <input class="form-check-input" type="checkbox" id="recRation" value="Ration Card" v-model="form.recordsAvailable">
+                <label class="form-check-label" for="recRation">Ration Card</label>
+              </div>
+              <div class="form-check form-check-inline me-3">
+                <input class="form-check-input" type="checkbox" id="recDL" value="Driving License" v-model="form.recordsAvailable">
+                <label class="form-check-label" for="recDL">Driving License</label>
+              </div>
+              <div class="form-check form-check-inline me-3">
+                <input class="form-check-input" type="checkbox" id="recOther" value="Other" v-model="form.recordsAvailable">
+                <label class="form-check-label" for="recOther">Other</label>
+              </div>
+              <div class="flex-grow-1" v-if="form.recordsAvailable.includes('Other')">
+                <input v-model="form.recordsOther" class="form-control" type="text" placeholder="Please specify other record" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-3 mt-0">
+          <div class="col-12">
+            <label class="form-label">Languages Known</label>
+            <div class="d-flex flex-wrap align-items-center gap-3">
+              <div class="form-check form-check-inline me-3">
+                <input class="form-check-input" type="checkbox" id="langTamil" value="Tamil" v-model="form.languagesKnown">
+                <label class="form-check-label" for="langTamil">Tamil</label>
+              </div>
+              <div class="form-check form-check-inline me-3">
+                <input class="form-check-input" type="checkbox" id="langEnglish" value="English" v-model="form.languagesKnown">
+                <label class="form-check-label" for="langEnglish">English</label>
+              </div>
+              <div class="form-check form-check-inline me-3">
+                <input class="form-check-input" type="checkbox" id="langTelugu" value="Telugu" v-model="form.languagesKnown">
+                <label class="form-check-label" for="langTelugu">Telugu</label>
+              </div>
+              <div class="form-check form-check-inline me-3">
+                <input class="form-check-input" type="checkbox" id="langKannada" value="Kannada" v-model="form.languagesKnown">
+                <label class="form-check-label" for="langKannada">Kannada</label>
+              </div>
+              <div class="form-check form-check-inline me-3">
+                <input class="form-check-input" type="checkbox" id="langOther" value="Other" v-model="form.languagesKnown">
+                <label class="form-check-label" for="langOther">Other</label>
+              </div>
+              <div class="flex-grow-1" v-if="form.languagesKnown.includes('Other')">
+                <input v-model="form.languagesOther" class="form-control" type="text" placeholder="Please specify other language" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -155,7 +246,7 @@
 import { reactive, ref } from 'vue';
 import SuccessModal from '../components/SuccessModal.vue';
 const form = reactive({
-  faceId: '', osaName: '', cveId: '', service: '', name: '', gender: '', aadhaar: '', dob: '', maritalStatus: '', spouseName: '', qualification: '', fatherName: '', motherName: '', religion: '', caste: '', permAddress: '', presAddress: '', contactPhone: '', emergencyContact: '', identMark1: '', identMark2: '', bloodGroup: '', expCompany: '', expPeriod: '', expDesignation: '', expReason: '', referenceBy: '', dateOfJoining: '', trainingArea: '', batchNo: '', trainingSkill: '', trainingFrom: '', trainingTo: '', completionDate: '', daysAttended: null, photoUrl: ''
+  faceId: '', osaName: '', cveId: '', service: '', area: '', osa: '', name: '', gender: '', aadhaar: '', dob: '', maritalStatus: '', spouseName: '', siblingName: '', qualification: '', educationalStatus: '', fatherName: '', motherName: '', fatherOccupation: '', motherOccupation: '', nativePlace: '', otherIncome: '', religion: '', caste: '', permAddress: '', presAddress: '', contactPhone: '', emergencyContact: '', identMark1: '', identMark2: '', bloodGroup: '', expCompany: '', expPeriod: '', expDesignation: '', expReason: '', referenceBy: '', dateOfJoining: '', trainingArea: '', batchNo: '', trainingSkill: '', trainingFrom: '', trainingTo: '', completionDate: '', daysAttended: null, photoUrl: '', recordsAvailable: [], recordsOther: '', languagesKnown: [], languagesOther: ''
 });
 
 const onPhotoChange = (e) => {
