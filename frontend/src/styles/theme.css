@@ -35,3 +35,7 @@ textarea.form-control { min-height: 84px; }
 
 /* Subheading utility */
 .subheading-muted { font-size: var(--font-size-sm); color: var(--color-muted) !important; }
+
+/* Modal stacking for nested modals (e.g., Update inside Details) */
+.modal.nested { z-index: 1065; }
+.modal-backdrop.nested { z-index: 1060; }
