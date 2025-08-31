@@ -53,7 +53,12 @@
             </select>
           </div>
         </div>
-        <div class="table-responsive">
+        <div v-if="filteredUsers.length === 0" class="text-center text-muted py-4">
+          <i class="bi bi-search display-6 d-block mb-2"></i>
+          <div class="fw-semibold">No users found</div>
+          <div class="small">Try a different search or clear filters</div>
+        </div>
+        <div v-else class="table-responsive">
           <table class="table table-hover table-sm align-middle mb-0">
             <thead>
               <tr>
