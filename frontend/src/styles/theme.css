@@ -36,6 +36,14 @@ body { margin: 0; font-family: var(--font-family); color: var(--color-dark); bac
 .form-control::placeholder { color: var(--color-muted); opacity: 1; }
 textarea.form-control { min-height: 84px; }
 
+/* Checkbox & Radio */
+.form-check-input,
+.form-check .form-check-input,
+input.form-check-input { border: 1px solid var(--color-primary) !important; border-color: var(--color-primary) !important; accent-color: var(--color-primary); background-color: #fff; }
+.form-check-input:not(:checked) { border-color: var(--color-primary) !important; background-color: #fff; }
+.form-check-input:checked { background-color: var(--color-primary) !important; border-color: var(--color-primary) !important; }
+.form-check-input:focus { border-color: var(--color-primary) !important; box-shadow: 0 0 0 .25rem color-mix(in srgb, var(--color-primary), transparent 75%); }
+
 /* Helpers */
 .text-primary { color: var(--color-primary) !important; }
 .border { border-color: var(--color-border) !important; }

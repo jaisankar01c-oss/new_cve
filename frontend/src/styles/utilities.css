@@ -47,3 +47,6 @@
 .section-spacing { margin-bottom: 12px; }
 .form-row-spaced { margin-top: 8px; }
 .form-actions { display: flex; gap: 8px; margin-top: 12px; }
+
+.form-check-input{ border: 1px solid var(--primary) !important; accent-color: var(--primary) !important; }
+.form-check-input:checked{ background-color: var(--primary) !important; border-color: var(--primary) !important; }

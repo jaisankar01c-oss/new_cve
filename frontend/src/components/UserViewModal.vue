@@ -66,10 +66,26 @@
           <section class="mb-4">
             <h6 class="detail-title">Contact Details</h6>
             <div class="row g-3">
-              <div class="col-12"><span class="detail-label">Permanent Address</span><div class="detail-value">{{ user.permAddress }}</div></div>
-              <div class="col-12"><span class="detail-label">Present Address</span><div class="detail-value">{{ user.presAddress }}</div></div>
-              <div class="col-md-6"><span class="detail-label">Contact Telephone Number</span><div class="detail-value">{{ user.contactPhone }}</div></div>
-              <div class="col-md-6"><span class="detail-label">Emergency Contact</span><div class="detail-value">{{ user.emergencyContact }}</div></div>
+              <!-- Permanent Address -->
+              <div class="col-12"><span class="detail-label">Permanent Address</span><div class="detail-value">{{ user.permanentAddress?.address || user.permAddress || '-' }}</div></div>
+              <div class="col-md-4"><span class="detail-label">City/Village</span><div class="detail-value">{{ user.permanentAddress?.cityVillage || '-' }}</div></div>
+              <div class="col-md-4"><span class="detail-label">Post</span><div class="detail-value">{{ user.permanentAddress?.post || '-' }}</div></div>
+              <div class="col-md-4"><span class="detail-label">Taluk</span><div class="detail-value">{{ user.permanentAddress?.taluk || '-' }}</div></div>
+              <div class="col-md-4"><span class="detail-label">District</span><div class="detail-value">{{ user.permanentAddress?.district || '-' }}</div></div>
+              <div class="col-md-4"><span class="detail-label">State</span><div class="detail-value">{{ user.permanentAddress?.state || '-' }}</div></div>
+              <div class="col-md-4"><span class="detail-label">Pincode</span><div class="detail-value">{{ user.permanentAddress?.pincode || '-' }}</div></div>
+
+              <!-- Present Address -->
+              <div class="col-12 mt-2"><span class="detail-label">Present Address</span><div class="detail-value">{{ user.presentAddress?.address || user.presAddress || '-' }}</div></div>
+              <div class="col-md-4"><span class="detail-label">City/Village</span><div class="detail-value">{{ user.presentAddress?.cityVillage || '-' }}</div></div>
+              <div class="col-md-4"><span class="detail-label">Post</span><div class="detail-value">{{ user.presentAddress?.post || '-' }}</div></div>
+              <div class="col-md-4"><span class="detail-label">Taluk</span><div class="detail-value">{{ user.presentAddress?.taluk || '-' }}</div></div>
+              <div class="col-md-4"><span class="detail-label">District</span><div class="detail-value">{{ user.presentAddress?.district || '-' }}</div></div>
+              <div class="col-md-4"><span class="detail-label">State</span><div class="detail-value">{{ user.presentAddress?.state || '-' }}</div></div>
+              <div class="col-md-4"><span class="detail-label">Pincode</span><div class="detail-value">{{ user.presentAddress?.pincode || '-' }}</div></div>
+
+              <div class="col-md-6"><span class="detail-label">Contact Telephone Number</span><div class="detail-value">{{ user.contactPhone || '-' }}</div></div>
+              <div class="col-md-6"><span class="detail-label">Emergency Contact</span><div class="detail-value">{{ user.emergencyContact || '-' }}</div></div>
             </div>
           </section>
 
