@@ -87,7 +87,7 @@
             </div>
           </div>
         </div>
-        <div class="modal-footer d-flex justify-content-center">
+        <div class="modal-footer d-flex justify-content-center border-top-0">
           <button class="btn btn-primary" @click="$emit('open-status', user)">Update Status</button>
         </div>
       </div>
