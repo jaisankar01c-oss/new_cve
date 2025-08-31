@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom py-2">
     <div class="container">
       <span class="navbar-brand fw-semibold text-primary">CVE &amp; WD Portal</span>
       <div class="ms-auto d-flex align-items-center gap-3">
