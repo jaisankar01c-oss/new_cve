@@ -53,7 +53,7 @@
             </select>
           </div>
         </div>
-        <div v-if="filteredUsers.length === 0" class="text-center text-muted py-4">
+        <div v-if="filteredUsers.length === 0" class="text-center text-muted py-5 my-3">
           <i class="bi bi-search display-6 d-block mb-2"></i>
           <div class="fw-semibold">No users found</div>
           <div class="small">Try a different search or clear filters</div>
