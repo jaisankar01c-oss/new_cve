@@ -140,6 +140,12 @@ const counts = computed(() => {
   return { accepted, pending, rejected };
 });
 
+const todayCount = computed(() => {
+  const d = new Date();
+  const today = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+  return users.value.filter(u => String(u.dateOfJoining || '').slice(0,10) === today).length;
+});
+
 const filteredUsers = computed(() => {
   const q = query.value.trim().toLowerCase();
   return users.value.filter(u => {
