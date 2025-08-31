@@ -197,8 +197,28 @@
       <section class="section-divider">
         <h4 class="detail-title">Contact Details</h4>
         <div class="row g-3">
-          <div class="col-12"><label class="form-label">Permanent Address</label><textarea v-model="form.permAddress" class="form-control" rows="2" placeholder="Enter Permanent Address"></textarea></div>
-          <div class="col-12"><label class="form-label">Present Address</label><textarea v-model="form.presAddress" class="form-control" rows="2" placeholder="Enter Present Address"></textarea></div>
+          <div class="col-12">
+            <label class="form-label">Present Address</label>
+            <textarea v-model="form.presentAddress.address" class="form-control" rows="2" placeholder="Address"></textarea>
+          </div>
+          <div class="col-md-4"><label class="form-label">City/Village</label><input v-model="form.presentAddress.cityVillage" class="form-control" type="text" placeholder="City/Village" /></div>
+          <div class="col-md-4"><label class="form-label">Post</label><input v-model="form.presentAddress.post" class="form-control" type="text" placeholder="Post" /></div>
+          <div class="col-md-4"><label class="form-label">Taluk</label><input v-model="form.presentAddress.taluk" class="form-control" type="text" placeholder="Taluk" /></div>
+          <div class="col-md-4"><label class="form-label">District</label><input v-model="form.presentAddress.district" class="form-control" type="text" placeholder="District" /></div>
+          <div class="col-md-4"><label class="form-label">State</label><input v-model="form.presentAddress.state" class="form-control" type="text" placeholder="State" /></div>
+          <div class="col-md-4"><label class="form-label">Pincode</label><input v-model="form.presentAddress.pincode" class="form-control" type="text" placeholder="Pincode" /></div>
+
+          <div class="col-12 mt-2">
+            <label class="form-label">Permanent Address</label>
+            <textarea v-model="form.permanentAddress.address" class="form-control" rows="2" placeholder="Address"></textarea>
+          </div>
+          <div class="col-md-4"><label class="form-label">City/Village</label><input v-model="form.permanentAddress.cityVillage" class="form-control" type="text" placeholder="City/Village" /></div>
+          <div class="col-md-4"><label class="form-label">Post</label><input v-model="form.permanentAddress.post" class="form-control" type="text" placeholder="Post" /></div>
+          <div class="col-md-4"><label class="form-label">Taluk</label><input v-model="form.permanentAddress.taluk" class="form-control" type="text" placeholder="Taluk" /></div>
+          <div class="col-md-4"><label class="form-label">District</label><input v-model="form.permanentAddress.district" class="form-control" type="text" placeholder="District" /></div>
+          <div class="col-md-4"><label class="form-label">State</label><input v-model="form.permanentAddress.state" class="form-control" type="text" placeholder="State" /></div>
+          <div class="col-md-4"><label class="form-label">Pincode</label><input v-model="form.permanentAddress.pincode" class="form-control" type="text" placeholder="Pincode" /></div>
+
           <div class="col-md-6"><label class="form-label">Contact Telephone Number</label><input v-model="form.contactPhone" class="form-control" type="text" placeholder="Enter Phone Number" /></div>
           <div class="col-md-6"><label class="form-label">Emergency Contact (First Information Given to)</label><input v-model="form.emergencyContact" class="form-control" type="text" placeholder="Enter Emergency Contact Name" /></div>
         </div>
@@ -380,7 +400,9 @@
 import { reactive, ref } from 'vue';
 import SuccessModal from '../components/SuccessModal.vue';
 const form = reactive({
-  faceId: '', osaName: '', cveId: '', service: '', area: '', osa: '', name: '', gender: '', aadhaar: '', dob: '', maritalStatus: '', spouseName: '', siblingName: '', qualification: '', educationalStatus: '',educationalCategory:'', fatherName: '', motherName: '', fatherOccupation: '', motherOccupation: '', nativePlace: '', otherIncome: '', religion: '', caste: '', permAddress: '', presAddress: '', contactPhone: '', emergencyContact: '', identMark1: '', identMark2: '', bloodGroup: '', expCompany: '', expPeriod: '', expDesignation: '', expReason: '', referenceBy: '', dateOfJoining: '', trainingArea: '', batchNo: '', trainingSkill: '', trainingFrom: '', trainingTo: '', completionDate: '', daysAttended: null, photoUrl: '', recordsAvailable: [], recordsOther: '', languagesKnown: [], languagesOther: '',
+  faceId: '', osaName: '', cveId: '', service: '', area: '', osa: '', name: '', gender: '', aadhaar: '', dob: '', maritalStatus: '', spouseName: '', siblingName: '', qualification: '', educationalStatus: '',educationalCategory:'', fatherName: '', motherName: '', fatherOccupation: '', motherOccupation: '', nativePlace: '', otherIncome: '', religion: '', caste: '', contactPhone: '', emergencyContact: '', identMark1: '', identMark2: '', bloodGroup: '', expCompany: '', expPeriod: '', expDesignation: '', expReason: '', referenceBy: '', dateOfJoining: '', trainingArea: '', batchNo: '', trainingSkill: '', trainingFrom: '', trainingTo: '', completionDate: '', daysAttended: null, photoUrl: '', recordsAvailable: [], recordsOther: '', languagesKnown: [], languagesOther: '',
+  presentAddress: { address: '', cityVillage: '', post: '', taluk: '', district: '', state: '', pincode: '' },
+  permanentAddress: { address: '', cityVillage: '', post: '', taluk: '', district: '', state: '', pincode: '' },
   physicalFitness: '', eyeTestReport: '', ageProof: '', medicalReport: '', drivingLicense: '', knowledgeOfWork: '', salaryDetailsAgreement: '', orientationOSSP: '', benefitsBriefing: '', benefitsStatutory: '', benefitsPPE: '', benefitsESIPF: '', benefitsRewards: '', natureOfJobBriefing: '', trainingDecision: '', comments: '', filledBy: '', osaSignature: ''
 });
 
