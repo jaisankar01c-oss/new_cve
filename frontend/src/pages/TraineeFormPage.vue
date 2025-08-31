@@ -175,12 +175,8 @@
                 <label class="form-check-label" for="langEnglish">English</label>
               </div>
               <div class="form-check form-check-inline me-3">
-                <input class="form-check-input" type="checkbox" id="langTelugu" value="Telugu" v-model="form.languagesKnown">
-                <label class="form-check-label" for="langTelugu">Telugu</label>
-              </div>
-              <div class="form-check form-check-inline me-3">
-                <input class="form-check-input" type="checkbox" id="langKannada" value="Kannada" v-model="form.languagesKnown">
-                <label class="form-check-label" for="langKannada">Kannada</label>
+                <input class="form-check-input" type="checkbox" id="langHindi" value="Hindi" v-model="form.languagesKnown">
+                <label class="form-check-label" for="langHindi">Hindi</label>
               </div>
               <div class="form-check form-check-inline me-3">
                 <input class="form-check-input" type="checkbox" id="langOther" value="Other" v-model="form.languagesKnown">
