@@ -1,7 +1,7 @@
 <template>
   <div>
     <img class="brand-logo" src="https://cdn.builder.io/api/v1/image/assets%2Fc98c532ea1554d2d9b237baf37efdf95%2F1bd2ceab768347d2a4c36137838a0f37?format=webp&width=800" alt="CVE & WD Logo" loading="lazy" />
-    <h2 class="display-6 text-center text-primary mb-3">Trainee Data &amp; Screening Form</h2>
+    <h2 class="modal-title section-heading text-center text-primary mb-3">Trainee Data &amp; Screening Form</h2>
     <form @submit.prevent="submit">
       <section class="section-divider">
         <h4 class="detail-title">Official Information</h4>
