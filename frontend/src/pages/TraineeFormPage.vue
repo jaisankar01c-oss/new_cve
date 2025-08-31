@@ -278,7 +278,7 @@
             </div>
           </div>
 
-          <div class="col-12">
+          <div class="col-sm-6 col-lg-4 col-xl-3">
             <label class="form-label">Driving License availability</label>
             <div class="d-flex flex-wrap align-items-center gap-3">
               <div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="dlYes" name="dlAvail" value="Yes" v-model="form.drivingLicense"><label class="form-check-label" for="dlYes">Yes</label></div>
@@ -287,7 +287,7 @@
             </div>
           </div>
 
-          <div class="col-12">
+          <div class="col-sm-6 col-lg-4 col-xl-3">
             <label class="form-label">Knowledge of work</label>
             <div class="d-flex flex-wrap align-items-center gap-3">
               <div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="kowAgree" name="kow" value="Agreed" v-model="form.knowledgeOfWork"><label class="form-check-label" for="kowAgree">Agreed</label></div>
@@ -295,7 +295,7 @@
             </div>
           </div>
 
-          <div class="col-12">
+          <div class="col-sm-6 col-lg-4 col-xl-3">
             <label class="form-label">Salary Details</label>
             <div class="d-flex flex-wrap align-items-center gap-3">
               <div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="salAgree" name="salary" value="Agreed" v-model="form.salaryDetailsAgreement"><label class="form-check-label" for="salAgree">Agreed</label></div>
@@ -303,7 +303,7 @@
             </div>
           </div>
 
-          <div class="col-12">
+          <div class="col-sm-6 col-lg-4 col-xl-3">
             <label class="form-label">Orientation about the respective OSSP</label>
             <div class="d-flex flex-wrap align-items-center gap-3">
               <div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="osspYes" name="ossp" value="Yes" v-model="form.orientationOSSP"><label class="form-check-label" for="osspYes">Yes</label></div>
