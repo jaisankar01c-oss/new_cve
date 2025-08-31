@@ -208,8 +208,12 @@
           <div class="col-md-4"><label class="form-label">State</label><input v-model="form.permanentAddress.state" class="form-control" type="text" placeholder="State" /></div>
           <div class="col-md-4"><label class="form-label">Pincode</label><input v-model="form.permanentAddress.pincode" class="form-control" type="text" placeholder="Pincode" /></div>
 
+ <div class="col-12 mt-2">
+            <h4 class="text-dark">Present Address</h4>
+          </div>
+
           <div class="col-12 mt-2">
-            <label class="form-label">Present Address</label>
+            <label class="form-label"> Address</label>
             <input v-model="form.presentAddress.address" class="form-control" type="text" placeholder="Address" />
           </div>
           <div class="col-md-4"><label class="form-label">City/Village</label><input v-model="form.presentAddress.cityVillage" class="form-control" type="text" placeholder="City/Village" /></div>
