@@ -1,9 +1,10 @@
 <template>
   <div class="card shadow-sm">
     <div class="card-body">
-      <h2 class="section-heading subheading-large text-center mb-3">Trainee Data &amp; Screening Form</h2>
+      <img class="brand-logo" src="https://cdn.builder.io/api/v1/image/assets%2Fc98c532ea1554d2d9b237baf37efdf95%2F1bd2ceab768347d2a4c36137838a0f37?format=webp&width=800" alt="CVE & WD Logo" loading="lazy" />
+      <h2 class="display-6 text-center text-primary mb-3">Trainee Data &amp; Screening Form</h2>
       <form @submit.prevent="submit">
-        <h4 class="h6 text-primary">Official Information</h4>
+        <h4 class="section-heading text-secondary">Official Information</h4>
         <div class="row g-3">
           <div class="col-md-3">
             <label class="form-label">FACE ID</label>
