@@ -198,19 +198,8 @@
         <h4 class="detail-title">Contact Details</h4>
         <div class="row g-3">
           <div class="col-12">
-            <label class="form-label">Present Address</label>
-            <textarea v-model="form.presentAddress.address" class="form-control" rows="2" placeholder="Address"></textarea>
-          </div>
-          <div class="col-md-4"><label class="form-label">City/Village</label><input v-model="form.presentAddress.cityVillage" class="form-control" type="text" placeholder="City/Village" /></div>
-          <div class="col-md-4"><label class="form-label">Post</label><input v-model="form.presentAddress.post" class="form-control" type="text" placeholder="Post" /></div>
-          <div class="col-md-4"><label class="form-label">Taluk</label><input v-model="form.presentAddress.taluk" class="form-control" type="text" placeholder="Taluk" /></div>
-          <div class="col-md-4"><label class="form-label">District</label><input v-model="form.presentAddress.district" class="form-control" type="text" placeholder="District" /></div>
-          <div class="col-md-4"><label class="form-label">State</label><input v-model="form.presentAddress.state" class="form-control" type="text" placeholder="State" /></div>
-          <div class="col-md-4"><label class="form-label">Pincode</label><input v-model="form.presentAddress.pincode" class="form-control" type="text" placeholder="Pincode" /></div>
-
-          <div class="col-12 mt-2">
             <label class="form-label">Permanent Address</label>
-            <textarea v-model="form.permanentAddress.address" class="form-control" rows="2" placeholder="Address"></textarea>
+            <input v-model="form.permanentAddress.address" class="form-control" type="text" placeholder="Address" />
           </div>
           <div class="col-md-4"><label class="form-label">City/Village</label><input v-model="form.permanentAddress.cityVillage" class="form-control" type="text" placeholder="City/Village" /></div>
           <div class="col-md-4"><label class="form-label">Post</label><input v-model="form.permanentAddress.post" class="form-control" type="text" placeholder="Post" /></div>
@@ -218,6 +207,17 @@
           <div class="col-md-4"><label class="form-label">District</label><input v-model="form.permanentAddress.district" class="form-control" type="text" placeholder="District" /></div>
           <div class="col-md-4"><label class="form-label">State</label><input v-model="form.permanentAddress.state" class="form-control" type="text" placeholder="State" /></div>
           <div class="col-md-4"><label class="form-label">Pincode</label><input v-model="form.permanentAddress.pincode" class="form-control" type="text" placeholder="Pincode" /></div>
+
+          <div class="col-12 mt-2">
+            <label class="form-label">Present Address</label>
+            <input v-model="form.presentAddress.address" class="form-control" type="text" placeholder="Address" />
+          </div>
+          <div class="col-md-4"><label class="form-label">City/Village</label><input v-model="form.presentAddress.cityVillage" class="form-control" type="text" placeholder="City/Village" /></div>
+          <div class="col-md-4"><label class="form-label">Post</label><input v-model="form.presentAddress.post" class="form-control" type="text" placeholder="Post" /></div>
+          <div class="col-md-4"><label class="form-label">Taluk</label><input v-model="form.presentAddress.taluk" class="form-control" type="text" placeholder="Taluk" /></div>
+          <div class="col-md-4"><label class="form-label">District</label><input v-model="form.presentAddress.district" class="form-control" type="text" placeholder="District" /></div>
+          <div class="col-md-4"><label class="form-label">State</label><input v-model="form.presentAddress.state" class="form-control" type="text" placeholder="State" /></div>
+          <div class="col-md-4"><label class="form-label">Pincode</label><input v-model="form.presentAddress.pincode" class="form-control" type="text" placeholder="Pincode" /></div>
 
           <div class="col-md-6"><label class="form-label">Contact Telephone Number</label><input v-model="form.contactPhone" class="form-control" type="text" placeholder="Enter Phone Number" /></div>
           <div class="col-md-6"><label class="form-label">Emergency Contact (First Information Given to)</label><input v-model="form.emergencyContact" class="form-control" type="text" placeholder="Enter Emergency Contact Name" /></div>
