@@ -10,7 +10,7 @@
             <form @submit.prevent="onSubmit" class="vstack gap-3">
               <div>
                 <label class="form-label" for="username">User name</label>
-                <input id="username" v-model="username" class="form-control" type="text" autocomplete="username" required />
+                <input id="username" v-model="username" placeholder="User name" class="form-control" type="text" autocomplete="username" required />
               </div>
               <div>
                 <label class="form-label" for="password">Password</label>
