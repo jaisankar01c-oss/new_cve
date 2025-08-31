@@ -237,7 +237,7 @@
       <section class="section-divider">
         <h4 class="detail-title">Other Details</h4>
         <div class="row g-3">
-          <div class="col-12">
+          <div class="col-md-3">
             <label class="form-label">Physical / Mental fitness</label>
             <div class="d-flex flex-wrap align-items-center gap-3">
               <div class="form-check form-check-inline">
@@ -251,7 +251,7 @@
             </div>
           </div>
 
-          <div class="col-12">
+          <div class="col-md-3">
             <label class="form-label">Eye Test Report Submitted</label>
             <div class="d-flex flex-wrap align-items-center gap-3">
               <div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="eyeYes" name="eyeTest" value="Yes" v-model="form.eyeTestReport"><label class="form-check-label" for="eyeYes">Yes</label></div>
@@ -260,7 +260,7 @@
             </div>
           </div>
 
-          <div class="col-12">
+          <div class="col-md-3">
             <label class="form-label">Age Proof Submitted</label>
             <div class="d-flex flex-wrap align-items-center gap-3">
               <div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="ageYes" name="ageProof" value="Yes" v-model="form.ageProof"><label class="form-check-label" for="ageYes">Yes</label></div>
