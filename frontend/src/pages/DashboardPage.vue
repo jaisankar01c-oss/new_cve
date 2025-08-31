@@ -42,10 +42,10 @@
         <h3 class="section-heading subheading-large mb-3">Users</h3>
         <div class="row g-2 mb-3">
           <div class="col-12 col-md-3">
-            <input v-model="query" type="text" class="form-control" placeholder="Search by FACE ID or Name" />
+            <input v-model="query" type="text" class="form-control small" placeholder="Search by FACE ID or Name" />
           </div>
           <div class="col-12 col-md-3">
-            <select v-model="statusFilter" class="form-select">
+            <select v-model="statusFilter" class="form-select small">
               <option value="">All statuses</option>
               <option value="Accepted">Accepted</option>
               <option value="Pending">Pending</option>
