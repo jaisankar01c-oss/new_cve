@@ -199,7 +199,7 @@
         <div class="row g-3">
 
         <div class="col-12 mt-2">
-            <h6 class="text-muted mt-3 mb-0">Permanent Address</h6>
+            <h6 class="text-muted mt-3 mb-0">Permanent Address :</h6>
           </div>
 
           <div class="col-12">
