@@ -49,3 +49,9 @@ const onSubmit = () => {
   router.push('/dashboard');
 };
 </script>
+
+<style scoped>
+.alert{
+  font-size:12px !important;
+}
+</style>
