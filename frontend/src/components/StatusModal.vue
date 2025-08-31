@@ -20,7 +20,7 @@
               <label class="form-label" for="remarks">Remarks</label>
               <textarea id="remarks" v-model="remarks" class="form-control" placeholder="Enter remarks"></textarea>
             </div>
-            <div class="mb-3 pt-3">
+            <div class="mb-2 pt-3">
               <button type="submit" class="btn btn-primary w-100">Save</button>
             </div>
           </form>
