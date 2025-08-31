@@ -22,7 +22,7 @@ body { margin: 0; font-family: var(--font-family); color: var(--color-dark); bac
 /* Tables */
 .table {min-width: 800px !important;}
 .table thead th { vertical-align: middle; }
-.table tbody td, .table tbody th { padding-top: 1.1rem; padding-bottom: 1.1rem;font-size: var(--font-size-sm); }
+.table tbody td, .table tbody th { padding-top: 1rem; padding-bottom: 1rem;font-size: var(--font-size-sm); }
 
 /* Headings */
 .section-heading { font-weight: var(--font-weight-semibold); color: var(--color-primary); margin-bottom: .5rem; }
