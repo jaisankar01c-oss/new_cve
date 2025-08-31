@@ -3,7 +3,7 @@
     <div class="modal-dialog modal-xl modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Trainee Details</h5>
+          <h5 class="modal-title section-heading m-0">Trainee Details</h5>
           <button type="button" class="btn-close" aria-label="Close" @click="$emit('close')"></button>
         </div>
         <div class="modal-body">
