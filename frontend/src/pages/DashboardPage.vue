@@ -2,35 +2,43 @@
   <div>
     <section class="mb-3">
       <div class="row g-3">
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="card h-100">
+        <div class="col-12 col-sm-6 col-lg-2">
+          <div class="card h-100 bg-primary text-white bg-gradient border-0">
             <div class="card-body text-center">
-              <div class="text-muted fw-semibold">Total Users</div>
-              <div class="fs-3 fw-bold text-primary">{{ users.length }}</div>
+              <div class="fw-semibold">Total Users</div>
+              <div class="fs-3 fw-bold">{{ users.length }}</div>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="card h-100">
+        <div class="col-12 col-sm-6 col-lg-2">
+          <div class="card h-100 bg-primary text-white bg-gradient border-0">
             <div class="card-body text-center">
-              <div class="text-muted fw-semibold">Accepted</div>
-              <div class="fs-3 fw-bold text-primary">{{ counts.accepted }}</div>
+              <div class="fw-semibold">Accepted</div>
+              <div class="fs-3 fw-bold">{{ counts.accepted }}</div>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="card h-100">
+        <div class="col-12 col-sm-6 col-lg-2">
+          <div class="card h-100 bg-primary text-white bg-gradient border-0">
             <div class="card-body text-center">
-              <div class="text-muted fw-semibold">Pending</div>
-              <div class="fs-3 fw-bold text-primary">{{ counts.pending }}</div>
+              <div class="fw-semibold">Pending</div>
+              <div class="fs-3 fw-bold">{{ counts.pending }}</div>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="card h-100">
+        <div class="col-12 col-sm-6 col-lg-2">
+          <div class="card h-100 bg-primary text-white bg-gradient border-0">
             <div class="card-body text-center">
-              <div class="text-muted fw-semibold">Rejected</div>
-              <div class="fs-3 fw-bold text-primary">{{ counts.rejected }}</div>
+              <div class="fw-semibold">Rejected</div>
+              <div class="fs-3 fw-bold">{{ counts.rejected }}</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-2">
+          <div class="card h-100 bg-primary text-white bg-gradient border-0">
+            <div class="card-body text-center">
+              <div class="fw-semibold">Today's Users</div>
+              <div class="fs-3 fw-bold">{{ todayCount }}</div>
             </div>
           </div>
         </div>
