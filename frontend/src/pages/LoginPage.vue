@@ -16,7 +16,7 @@
                 <label class="form-label" for="password">Password</label>
                 <input id="password" v-model="password" class="form-control" type="password" autocomplete="current-password" required />
               </div>
-               <div v-if="errorMsg" class="text-danger small text-center py-2 mb-1" role="alert">{{ errorMsg }}</div>
+               <div v-if="errorMsg" class="alert alert-danger small text-center py-2 mb-1" role="alert">{{ errorMsg }}</div>
               <button class="btn btn-primary w-100" type="submit">Login</button>
               <p class="text-center text-muted small m-0">© All rights reserved.</p>
             </form>
