@@ -2,7 +2,7 @@
   <div>
     <section class="mb-3">
       <div class="row g-3">
-        <div class="col-12 col-sm-6 col-lg-4">
+        <div class="col-12 col-sm-6 col-lg-3">
           <div class="card h-100 bg-brand border-0">
             <div class="card-body text-center">
               <div class="fw-semibold">Total Users</div>
@@ -10,7 +10,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-sm-6 col-lg-4">
+        <div class="col-12 col-sm-6 col-lg-3">
           <div class="card h-100 bg-brand border-0">
             <div class="card-body text-center">
               <div class="fw-semibold">Accepted</div>
@@ -18,7 +18,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-sm-6 col-lg-4">
+        <div class="col-12 col-sm-6 col-lg-3">
           <div class="card h-100 bg-brand border-0">
             <div class="card-body text-center">
               <div class="fw-semibold">Pending</div>
@@ -26,7 +26,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-sm-6 col-lg-4">
+        <div class="col-12 col-sm-6 col-lg-3">
           <div class="card h-100 bg-brand border-0">
             <div class="card-body text-center">
               <div class="fw-semibold">Today's Users</div>
