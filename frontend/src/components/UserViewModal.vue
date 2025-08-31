@@ -87,9 +87,8 @@
             </div>
           </div>
         </div>
-        <div class="modal-footer d-flex justify-content-between">
+        <div class="modal-footer d-flex justify-content-center">
           <button class="btn btn-primary" @click="$emit('open-status', user)">Update Status</button>
-          <button class="btn btn-outline-secondary" @click="$emit('close')">Close</button>
         </div>
       </div>
     </div>
