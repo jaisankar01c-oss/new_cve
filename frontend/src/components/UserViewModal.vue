@@ -106,4 +106,7 @@ defineProps({ user: { type: Object, required: true } });
 </script>
 
 <style scope>
+.section-heading{
+  font-size: var(--font-size-sm); 
+}
 </style>
