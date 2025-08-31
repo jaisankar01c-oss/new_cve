@@ -41,7 +41,7 @@
       <div class="card-body">
         <h3 class="section-heading subheading-large mb-3">Users</h3>
         <div class="row g-2 mb-3">
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-3">
             <input v-model="query" type="text" class="form-control" placeholder="Search by FACE ID or Name" />
           </div>
           <div class="col-12 col-md-3">
