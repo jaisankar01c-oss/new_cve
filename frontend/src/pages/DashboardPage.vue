@@ -77,7 +77,7 @@
                 <td>{{ u.mobile }}</td>
                 <td>{{ u.gender }}</td>
                 <td>
-                  <div :class="statusAlertClass(u.status)" class="py-1 px-2 mb-0 display-5 d-inline">
+                  <div :class="statusAlertClass(u.status)" class="py-1 px-2 mb-0 display-6 d-inline">
                     {{ u.status }}
                   </div>
                 </td>
