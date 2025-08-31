@@ -10,16 +10,16 @@
           <!-- Profile summary -->
           <div class="profile-summary d-flex align-items-center gap-3 mb-4">
             <template v-if="user.photoUrl">
-              <img :src="user.photoUrl" alt="Photo" class="avatar-lg rounded border" />
+              <img :src="user.photoUrl" alt="Photo" class="avatar-lg profile-avatar rounded border" />
             </template>
-            <div v-else class="avatar-lg rounded-circle border d-flex align-items-center justify-content-center avatar-fallback">
+            <div v-else class="avatar-lg profile-avatar rounded-circle border d-flex align-items-center justify-content-center avatar-fallback">
               <i class="bi bi-person fs-2 text-muted"></i>
             </div>
             <div class="flex-grow-1">
               <div class="fs-5 fw-semibold text-primary">{{ user.name }}</div>
               <div class="small text-muted">FACE ID: {{ user.faceId }} <span class="mx-2">|</span> CVE ID: {{ user.cveId || '-' }}</div>
             </div>
-            <div :class="statusAlertClass(user.status)" class="py-1 px-2 mb-0 small d-inline">{{ user.status }}</div>
+            <div :class="statusAlertClass(user.status)" class="py-1 px-2 mb-0 small d-inline status-chip">{{ user.status }}</div>
           </div>
 
           <!-- Official Information -->
@@ -105,7 +105,13 @@ defineProps({ user: { type: Object, required: true } });
 .detail-title { font-weight: var(--font-weight-semibold); color: var(--color-dark); margin-bottom: .5rem; }
 .detail-label { display:block; color: var(--color-primary); font-weight: var(--font-weight-medium); font-size: var(--font-size-sm); margin-bottom: .25rem; }
 .detail-value { border: 1px solid var(--color-border); border-radius: var(--border-radius-md); padding: .5rem .75rem; background: var(--color-white); font-size: var(--font-size-sm); }
-.profile-summary { border: 1px solid var(--color-border); border-radius: var(--border-radius-md); padding: .75rem; background: var(--color-white); }
+.profile-summary { border: 1px solid var(--color-border); border-radius: var(--border-radius-md); padding: .75rem; background: var(--color-white); gap: .75rem; flex-wrap: wrap; }
 .avatar-fallback { background: var(--color-light); }
+.profile-avatar { width: 96px; height: 96px; object-fit: cover; }
+@media (max-width: 576px) {
+  .profile-summary { flex-direction: column; align-items: flex-start; }
+  .profile-avatar { width: clamp(64px, 22vw, 96px); height: clamp(64px, 22vw, 96px); }
+  .status-chip { align-self: flex-start; }
+}
 .section-heading { font-size: 20px !important; }
 </style>
