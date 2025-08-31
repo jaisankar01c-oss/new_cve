@@ -41,7 +41,7 @@ const onSubmit = () => {
   const validUser = username.value === 'Admin';
   const validPass = password.value === 'Admin@123';
   if (!validUser || !validPass) {
-    errorMsg.value = 'Invalid credentials!';
+    errorMsg.value = 'Incorrect username or password. Please try again.';
     return;
   }
   localStorage.setItem('auth', 'true');
