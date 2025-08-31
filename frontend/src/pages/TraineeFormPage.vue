@@ -143,8 +143,8 @@
         </div>
       </section>
 
-      <div class="d-flex justify-content-center mt-3">
-        <button class="btn btn-primary" type="submit">Submit</button>
+      <div class="d-flex justify-content-center my-4">
+        <button class="btn btn-primary px-5" type="submit">Submit</button>
       </div>
     </form>
     <SuccessModal v-if="showSuccess" @close="showSuccess=false" />
