@@ -24,7 +24,7 @@
           </div>
         </div>
 
-        <h4 class="h6 text-primary mt-3">Personal Information</h4>
+        <h4 class="section-heading text-secondary mt-3">Personal Information</h4>
         <div class="row g-3">
           <div class="col-md-4"><label class="form-label">Name</label><input v-model="form.name" class="form-control" type="text" placeholder="Enter Name" /></div>
           <div class="col-md-4"><label class="form-label">Gender</label>
@@ -86,7 +86,7 @@
           </div>
         </div>
 
-        <h4 class="h6 text-primary mt-3">Contact Details</h4>
+        <h4 class="section-heading text-secondary mt-3">Contact Details</h4>
         <div class="row g-3">
           <div class="col-12"><label class="form-label">Permanent Address</label><textarea v-model="form.permAddress" class="form-control" rows="2" placeholder="Enter Permanent Address"></textarea></div>
           <div class="col-12"><label class="form-label">Present Address</label><textarea v-model="form.presAddress" class="form-control" rows="2" placeholder="Enter Present Address"></textarea></div>
@@ -94,13 +94,13 @@
           <div class="col-md-6"><label class="form-label">Emergency Contact (First Information Given to)</label><input v-model="form.emergencyContact" class="form-control" type="text" placeholder="Enter Emergency Contact Name" /></div>
         </div>
 
-        <h4 class="h6 text-primary mt-3">Medical Details</h4>
+        <h4 class="section-heading text-secondary mt-3">Medical Details</h4>
         <div class="row g-3">
           <div class="col-md-6"><label class="form-label">Personal Identification Marks</label><input v-model="form.identMark1" class="form-control" type="text" placeholder="Mark 1" /><input v-model="form.identMark2" class="form-control mt-2" type="text" placeholder="Mark 2" /></div>
           <div class="col-md-6"><label class="form-label">Blood Group</label><input v-model="form.bloodGroup" class="form-control" type="text" placeholder="Enter Blood Group" /></div>
         </div>
 
-        <h4 class="h6 text-primary mt-3">Experience &amp; Training</h4>
+        <h4 class="section-heading text-secondary mt-3">Experience &amp; Training</h4>
         <div class="row g-3">
           <div class="col-12"><label class="form-label">Industrial Experience</label><input v-model="form.expCompany" class="form-control" type="text" placeholder="Company Name" /><input v-model="form.expPeriod" class="form-control mt-2" type="text" placeholder="Period" /><input v-model="form.expDesignation" class="form-control mt-2" type="text" placeholder="Designation" /><input v-model="form.expReason" class="form-control mt-2" type="text" placeholder="Reason for Leaving" /></div>
         </div>
