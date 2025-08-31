@@ -9,7 +9,12 @@
         <div class="modal-body">
           <!-- Profile summary -->
           <div class="profile-summary d-flex align-items-center gap-3 mb-4">
-            <img v-if="user.photoUrl" :src="user.photoUrl" alt="Photo" class="avatar-lg rounded border" />
+            <template v-if="user.photoUrl">
+              <img :src="user.photoUrl" alt="Photo" class="avatar-lg rounded border" />
+            </template>
+            <div v-else class="avatar-lg rounded-circle border d-flex align-items-center justify-content-center avatar-fallback">
+              <i class="bi bi-person fs-2 text-muted"></i>
+            </div>
             <div class="flex-grow-1">
               <div class="fs-5 fw-semibold text-primary">{{ user.name }}</div>
               <div class="small text-muted">FACE ID: {{ user.faceId }} <span class="mx-2">|</span> CVE ID: {{ user.cveId || '-' }}</div>
@@ -97,9 +102,10 @@ defineProps({ user: { type: Object, required: true } });
 </script>
 
 <style scoped>
-.detail-title { font-weight: var(--font-weight-semibold); color: var(--color-primary-dark); margin-bottom: .5rem; }
-.detail-label { display:block; color: var(--color-primary-dark); font-weight: var(--font-weight-medium); font-size: var(--font-size-sm); margin-bottom: .25rem; }
+.detail-title { font-weight: var(--font-weight-semibold); color: var(--color-dark); margin-bottom: .5rem; }
+.detail-label { display:block; color: var(--color-dark); font-weight: var(--font-weight-medium); font-size: var(--font-size-sm); margin-bottom: .25rem; }
 .detail-value { border: 1px solid var(--color-border); border-radius: var(--border-radius-md); padding: .5rem .75rem; background: var(--color-white); font-size: var(--font-size-sm); }
 .profile-summary { border: 1px solid var(--color-border); border-radius: var(--border-radius-md); padding: .75rem; background: var(--color-white); }
+.avatar-fallback { background: var(--color-light); }
 .section-heading { font-size: 20px !important; }
 </style>
