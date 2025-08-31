@@ -97,6 +97,9 @@ const users = ref([]);
 const selected = ref(null);
 const statusTarget = ref(null);
 
+const query = ref('');
+const statusFilter = ref('');
+
 onMounted(async () => { users.value = await getUsers(); });
 const counts = computed(() => {
   const accepted = users.value.filter(u => u.status === 'Accepted').length;
@@ -104,6 +107,18 @@ const counts = computed(() => {
   const rejected = users.value.filter(u => u.status === 'Rejected').length;
   return { accepted, pending, rejected };
 });
+
+const filteredUsers = computed(() => {
+  const q = query.value.trim().toLowerCase();
+  return users.value.filter(u => {
+    const matchesQ = !q || u.faceId.toLowerCase().includes(q) || u.name.toLowerCase().includes(q);
+    const matchesStatus = !statusFilter.value || u.status === statusFilter.value;
+    return matchesQ && matchesStatus;
+  });
+});
+
+const badgeClass = (s) => s === 'Accepted' ? 'bg-success' : s === 'Rejected' ? 'bg-danger' : 'bg-secondary';
+
 const openView = (u) => { selected.value = u; };
 const openStatus = (u) => { statusTarget.value = u; };
 const onStatusSaved = (updated) => {
