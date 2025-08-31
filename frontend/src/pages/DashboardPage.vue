@@ -60,8 +60,8 @@
         </div>
         <div v-else class="table-responsive">
           <table class="table table-hover table-sm align-middle mb-0">
-            <thead>
-              <tr class="bg-primary">
+            <thead class="bg-primary">
+              <tr>
                 <th>FACE ID</th>
                 <th>Name</th>
                 <th>Mobile</th>
