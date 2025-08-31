@@ -40,6 +40,19 @@
     <section class="card">
       <div class="card-body">
         <h3 class="section-heading subheading-large mb-3">Users</h3>
+        <div class="row g-2 mb-3">
+          <div class="col-12 col-md-6">
+            <input v-model="query" type="text" class="form-control" placeholder="Search by FACE ID or Name" />
+          </div>
+          <div class="col-12 col-md-3">
+            <select v-model="statusFilter" class="form-select">
+              <option value="">All statuses</option>
+              <option value="Accepted">Accepted</option>
+              <option value="Pending">Pending</option>
+              <option value="Rejected">Rejected</option>
+            </select>
+          </div>
+        </div>
         <div class="table-responsive">
           <table class="table table-hover table-sm align-middle mb-0">
             <thead>
@@ -48,15 +61,17 @@
                 <th>Name</th>
                 <th>Mobile</th>
                 <th>Gender</th>
+                <th>Status</th>
                 <th style="width: 112px;">Action</th>
               </tr>
             </thead>
             <tbody>
-              <tr v-for="u in users" :key="u.faceId">
+              <tr v-for="u in filteredUsers" :key="u.faceId">
                 <td>{{ u.faceId }}</td>
                 <td>{{ u.name }}</td>
                 <td>{{ u.mobile }}</td>
                 <td>{{ u.gender }}</td>
+                <td><span class="badge" :class="badgeClass(u.status)">{{ u.status }}</span></td>
                 <td>
                   <button class="btn btn-outline-primary btn-sm" @click="openView(u)">View</button>
                 </td>
