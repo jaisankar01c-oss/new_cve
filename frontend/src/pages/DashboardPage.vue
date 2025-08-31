@@ -49,7 +49,7 @@
           <div class="col-12 col-md-3">
             <input v-model="query" type="text" class="form-control small" placeholder="Search by FACE ID or Name" />
           </div>
-          <div class="col-12 col-md-3">
+          <div class="col-12 col-md-3 py-2 py-md-0">
             <select v-model="statusFilter" class="form-select small">
               <option value="">All statuses</option>
               <option value="Accepted">Accepted</option>
