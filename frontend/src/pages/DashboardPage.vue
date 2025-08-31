@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="mb-3">
+    <section class="mb-3 mt-2">
       <div class="row g-3">
         <div class="col-12 col-sm-6 col-lg-3">
           <div class="card h-100 bg-brand border-0">
@@ -39,12 +39,17 @@
 
     <section class="card border-0 shadow-none bg-transparent p-0">
       <div class="card-body p-0">
-        <h4 class="section-heading mb-3 mt-4">Trainees</h4>
+        <div class="d-flex align-items-center justify-content-between mt-4 mb-3">
+          <h4 class="section-heading m-0">Trainees</h4>
+          <router-link to="/trainee-form" class="new-button btn btn-primary btn-sm d-inline-flex align-items-center gap-2">
+            <i class="bi bi-plus-lg"></i><span>New</span>
+          </router-link>
+        </div>
         <div class="row g-2 mb-3">
           <div class="col-12 col-md-3">
             <input v-model="query" type="text" class="form-control small" placeholder="Search by FACE ID or Name" />
           </div>
-          <div class="col-12 col-md-3">
+          <div class="col-12 col-md-3 py-2 py-md-0">
             <select v-model="statusFilter" class="form-select small">
               <option value="">All statuses</option>
               <option value="Accepted">Accepted</option>
@@ -53,7 +58,7 @@
             </select>
           </div>
         </div>
-        <div v-if="filteredUsers.length === 0" class="text-center text-muted py-4">
+        <div v-if="filteredUsers.length === 0" class="text-center text-muted py-5 my-3">
           <i class="bi bi-search display-6 d-block mb-2"></i>
           <div class="fw-semibold">No users found</div>
           <div class="small">Try a different search or clear filters</div>
@@ -198,3 +203,10 @@ const onStatusSaved = (updated) => {
   statusTarget.value = null;
 };
 </script>
+
+<style scoped>
+.new-button{
+  height:36px !important;
+}
+
+</style>

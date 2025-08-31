@@ -1,14 +1,14 @@
 <template>
   <div class="modal fade show d-block nested" tabindex="-1" @click.self="$emit('close')">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-dialog modal-md modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title section-heading m-0">Update Status</h5>
           <button type="button" class="btn-close" @click="$emit('close')"></button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body p-4">
           <form @submit.prevent="save" class="row g-3">
-            <div class="col-md-6">
+            <div class="col-12">
               <label class="form-label" for="status">Status</label>
               <select id="status" v-model="status" class="form-select" required>
                 <option value="Accepted">Accept</option>
@@ -20,9 +20,8 @@
               <label class="form-label" for="remarks">Remarks</label>
               <textarea id="remarks" v-model="remarks" class="form-control" placeholder="Enter remarks"></textarea>
             </div>
-            <div class="modal-footer">
-              <button type="submit" class="btn btn-primary">Save</button>
-              <button type="button" class="btn btn-outline-secondary" @click="$emit('close')">Cancel</button>
+            <div class="mb-2 pt-3">
+              <button type="submit" class="btn btn-primary w-100">Save</button>
             </div>
           </form>
         </div>
