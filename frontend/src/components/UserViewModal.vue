@@ -4,10 +4,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title">Trainee Details</h5>
-          <div class="d-flex gap-2">
-            <button class="btn btn-primary" @click="$emit('open-status', user)">Update Status</button>
-            <button class="btn btn-outline-secondary" @click="$emit('close')">Close</button>
-          </div>
+          <button type="button" class="btn-close" aria-label="Close" @click="$emit('close')"></button>
         </div>
         <div class="modal-body">
           <div class="card mb-3">
@@ -89,6 +86,10 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="modal-footer d-flex justify-content-between">
+          <button class="btn btn-primary" @click="$emit('open-status', user)">Update Status</button>
+          <button class="btn btn-outline-secondary" @click="$emit('close')">Close</button>
         </div>
       </div>
     </div>
