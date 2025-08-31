@@ -59,7 +59,8 @@
             </select>
           </div>
           <div class="col-md-4" v-if="form.maritalStatus==='Married'"><label class="form-label">Spouse Name</label><input v-model="form.spouseName" class="form-control" type="text" placeholder="Enter Spouse Name" /></div>
-          <div class="col-md-4" v-else-if="form.maritalStatus==='Single'"><label class="form-label">Sibling Name</label><input v-model="form.siblingName" class="form-control" type="text" placeholder="Enter Sibling Name" /></div>
+          <div class="col-md-4" v-if="form.maritalStatus==='Married'"><label class="form-label">Spouse Occupication</label><input v-model="form.spouseOccupication" class="form-control" type="text" placeholder="Enter Spouse Occupication" /></div>
+          <div class="col-md-4" v-else-if="form.maritalStatus==='Single'"><label class="form-label">Sibling Count</label><input v-model="form.siblingCount" class="form-control" type="text" placeholder="Enter Sibling Count" /></div>
         </div>
         <div class="row g-3 mt-0">
           <div class="col-12 col-md-4">
@@ -409,7 +410,7 @@
 import { reactive, ref } from 'vue';
 import SuccessModal from '../components/SuccessModal.vue';
 const form = reactive({
-  faceId: '', osaName: '', cveId: '', service: '', area: '', osa: '', name: '', gender: '', aadhaar: '', dob: '', maritalStatus: '', spouseName: '', siblingName: '', qualification: '', educationalStatus: '',educationalCategory:'', fatherName: '', motherName: '', fatherOccupation: '', motherOccupation: '', nativePlace: '', otherIncome: '', religion: '', caste: '', contactPhone: '', emergencyContact: '', identMark1: '', identMark2: '', bloodGroup: '', expCompany: '', expPeriod: '', expDesignation: '', expReason: '', referenceBy: '', dateOfJoining: '', trainingArea: '', batchNo: '', trainingSkill: '', trainingFrom: '', trainingTo: '', completionDate: '', daysAttended: null, photoUrl: '', recordsAvailable: [], recordsOther: '', languagesKnown: [], languagesOther: '',
+  faceId: '', osaName: '', cveId: '', service: '', area: '', osa: '', name: '', gender: '', aadhaar: '', dob: '', maritalStatus: '', spouseName: '', spouseOccupication: '', siblingCount: '', qualification: '', educationalStatus: '',educationalCategory:'', fatherName: '', motherName: '', fatherOccupation: '', motherOccupation: '', nativePlace: '', otherIncome: '', religion: '', caste: '', contactPhone: '', emergencyContact: '', identMark1: '', identMark2: '', bloodGroup: '', expCompany: '', expPeriod: '', expDesignation: '', expReason: '', referenceBy: '', dateOfJoining: '', trainingArea: '', batchNo: '', trainingSkill: '', trainingFrom: '', trainingTo: '', completionDate: '', daysAttended: null, photoUrl: '', recordsAvailable: [], recordsOther: '', languagesKnown: [], languagesOther: '',
   presentAddress: { address: '', cityVillage: '', post: '', taluk: '', district: '', state: '', pincode: '' },
   permanentAddress: { address: '', cityVillage: '', post: '', taluk: '', district: '', state: '', pincode: '' },
   physicalFitness: '', eyeTestReport: '', ageProof: '', medicalReport: '', drivingLicense: '', knowledgeOfWork: '', salaryDetailsAgreement: '', orientationOSSP: '', benefitsBriefing: '', benefitsStatutory: '', benefitsPPE: '', benefitsESIPF: '', benefitsRewards: '', natureOfJobBriefing: '', trainingDecision: '', comments: '', filledBy: '', osaSignature: ''
