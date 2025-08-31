@@ -9,7 +9,7 @@
         <div class="modal-body">
           <div class="card mb-3">
             <div class="card-body">
-              <h4 class="text-secondary">Official Information</h4>
+              <h4 class="section-heading text-secondary">Official Information</h4>
               <div class="row g-3">
                 <div class="col-md-3 text-center">
                   <label class="form-label d-block">Photo</label>
@@ -104,3 +104,6 @@
 <script setup>
 defineProps({ user: { type: Object, required: true } });
 </script>
+
+<style scope>
+</style>
