@@ -4,8 +4,9 @@
       <div class="col-12 col-sm-10 col-md-6 col-lg-4">
         <div class="card shadow-sm">
           <div class="card-body">
-            <h2 class="section-heading subheading-large text-center mb-1">Login</h2>
-            <p class="text-center text-muted mb-3">Please provide login to access users.</p>
+            <img class="brand-logo" src="https://cdn.builder.io/api/v1/image/assets%2Fc98c532ea1554d2d9b237baf37efdf95%2F1bd2ceab768347d2a4c36137838a0f37?format=webp&width=800" alt="CVE & WD Logo" loading="lazy" />
+            <h2 class="display-6 text-center text-primary mb-1">Login</h2>
+            <p class="text-center subheading-muted mb-3">Please provide login to access users.</p>
             <form @submit.prevent="onSubmit" class="vstack gap-3">
               <div>
                 <label class="form-label" for="username">User name</label>
