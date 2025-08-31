@@ -7,6 +7,7 @@
             <img class="brand-logo" src="https://cdn.builder.io/api/v1/image/assets%2Fc98c532ea1554d2d9b237baf37efdf95%2F1bd2ceab768347d2a4c36137838a0f37?format=webp&width=800" alt="CVE & WD Logo" loading="lazy" />
             <h3 class="text-center text-primary py-2 mb-1">Admin Login</h3>
             <p class="text-center subheading-muted mb-3">Please provide login to access trainees.</p>
+            <div v-if="errorMsg" class="alert small alert-danger py-2 mb-3" role="alert">{{ errorMsg }}</div>
             <form @submit.prevent="onSubmit" class="vstack gap-3">
               <div>
                 <label class="form-label" for="username">Username</label>
@@ -16,7 +17,6 @@
                 <label class="form-label" for="password">Password</label>
                 <input id="password" v-model="password" class="form-control" type="password" autocomplete="current-password" required />
               </div>
-               <div v-if="errorMsg" class="alert alert-danger small text-center py-2 mb-1" role="alert">{{ errorMsg }}</div>
               <button class="btn btn-primary w-100" type="submit">Login</button>
               <p class="text-center text-muted small m-0">© All rights reserved.</p>
             </form>
