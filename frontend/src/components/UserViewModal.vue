@@ -103,7 +103,7 @@ defineProps({ user: { type: Object, required: true } });
 
 <style scoped>
 .detail-title { font-weight: var(--font-weight-semibold); color: var(--color-dark); margin-bottom: .5rem; }
-.detail-label { display:block; color: var(--color-dark); font-weight: var(--font-weight-medium); font-size: var(--font-size-sm); margin-bottom: .25rem; }
+.detail-label { display:block; color: var(--primary); font-weight: var(--font-weight-medium); font-size: var(--font-size-sm); margin-bottom: .25rem; }
 .detail-value { border: 1px solid var(--color-border); border-radius: var(--border-radius-md); padding: .5rem .75rem; background: var(--color-white); font-size: var(--font-size-sm); }
 .profile-summary { border: 1px solid var(--color-border); border-radius: var(--border-radius-md); padding: .75rem; background: var(--color-white); }
 .avatar-fallback { background: var(--color-light); }
