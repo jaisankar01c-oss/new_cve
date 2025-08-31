@@ -140,7 +140,48 @@ const filteredUsers = computed(() => {
   });
 });
 
-const badgeClass = (s) => s === 'Accepted' ? 'bg-success' : s === 'Rejected' ? 'bg-danger' : 'bg-secondary';
+const currentPage = ref(1);
+const pageSize = ref(10);
+
+const totalPages = computed(() => Math.max(1, Math.ceil(filteredUsers.value.length / pageSize.value)));
+
+const paginatedUsers = computed(() => {
+  const start = (currentPage.value - 1) * pageSize.value;
+  return filteredUsers.value.slice(start, start + pageSize.value);
+});
+
+const goToPage = (p) => { if (p >= 1 && p <= totalPages.value) currentPage.value = p; };
+
+const paginationItems = computed(() => {
+  const items = [];
+  const total = totalPages.value;
+  const cur = currentPage.value;
+  const addPage = (p) => items.push({ key: `page-${p}` , page: p, label: p, ellipsis: false });
+  const addDots = (i) => items.push({ key: `dots-${i}` , page: null, label: '…', ellipsis: true });
+
+  if (total <= 7) {
+    for (let i = 1; i <= total; i++) addPage(i);
+  } else {
+    addPage(1);
+    if (cur <= 4) {
+      for (let i = 2; i <= 5; i++) addPage(i);
+      addDots(1);
+      addPage(total);
+    } else if (cur >= total - 3) {
+      addDots(2);
+      for (let i = total - 4; i < total; i++) addPage(i);
+      addPage(total);
+    } else {
+      addDots(3);
+      addPage(cur - 1); addPage(cur); addPage(cur + 1);
+      addDots(4);
+      addPage(total);
+    }
+  }
+  return items;
+});
+
+const statusAlertClass = (s) => s === 'Accepted' ? 'alert alert-success' : s === 'Rejected' ? 'alert alert-danger' : 'alert alert-warning';
 
 const openView = (u) => { selected.value = u; };
 const openStatus = (u) => { statusTarget.value = u; };
