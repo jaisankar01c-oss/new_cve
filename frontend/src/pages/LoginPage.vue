@@ -9,7 +9,6 @@
             <p class="text-center subheading-muted mb-3">Please provide login to access trainees.</p>
             <form @submit.prevent="onSubmit" class="vstack gap-3">
               <div>
-                <label class="form-label" for="username">User name</label>
                 <input id="username" v-model="username" placeholder="User name" class="form-control" type="text" autocomplete="username" required />
               </div>
               <div>
