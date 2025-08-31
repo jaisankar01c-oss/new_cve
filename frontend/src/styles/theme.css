@@ -29,3 +29,9 @@ textarea.form-control { min-height: 84px; }
 /* Helpers */
 .text-primary { color: var(--color-primary) !important; }
 .border { border-color: var(--color-border) !important; }
+
+/* Branding */
+.brand-logo { display:block; margin:0 auto .5rem auto; height:56px; width:auto; }
+
+/* Subheading utility */
+.subheading-muted { font-size: var(--font-size-sm); color: var(--color-muted) !important; }
