@@ -174,7 +174,7 @@ const submit = () => {
 </script>
 
 <style scoped>
-.detail-title { font-weight: var(--font-weight-semibold); color: var(--color-dark); margin-bottom: .5rem; }
+.detail-title { font-weight: var(--font-weight-semibold); color: var(--color-dark); margin-bottom: .5rem;margin-top: 1rem; }
 /*.section-divider { padding-top: .5rem; margin-top: 1rem; border-top: 1px solid var(--color-border); }*/
 .avatar-fallback { background: var(--color-light); }
 </style>
