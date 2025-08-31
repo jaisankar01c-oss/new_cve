@@ -1,7 +1,7 @@
 <template>
   <div class="card shadow-sm">
     <div class="card-body">
-      <h2 class="h5 text-center text-primary mb-3">Trainee Data &amp; Screening Form</h2>
+      <h2 class="section-heading subheading-large text-center mb-3">Trainee Data &amp; Screening Form</h2>
       <form @submit.prevent="submit">
         <h4 class="h6 text-primary">Official Information</h4>
         <div class="row g-3">
