@@ -205,5 +205,8 @@ const onStatusSaved = (updated) => {
 </script>
 
 <style scoped>
+.new-button{
+  height:40px !important;
+}
 
 </style>
