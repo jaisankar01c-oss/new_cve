@@ -10,7 +10,7 @@
           <form @submit.prevent="save" class="row g-3">
             <div class="col-md-6">
               <label class="form-label" for="status">Status</label>
-              <select id="status" v-model="status" class="form-select" required>
+              <select id="status" v-model="status" class="form-select w-100" required>
                 <option value="Accepted">Accept</option>
                 <option value="Rejected">Reject</option>
                 <option value="Pending">Pending</option>
