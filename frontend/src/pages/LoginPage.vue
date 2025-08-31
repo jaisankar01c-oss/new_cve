@@ -5,7 +5,7 @@
         <div class="card shadow-sm">
           <div class="card-body">
             <img class="brand-logo" src="https://cdn.builder.io/api/v1/image/assets%2Fc98c532ea1554d2d9b237baf37efdf95%2F1bd2ceab768347d2a4c36137838a0f37?format=webp&width=800" alt="CVE & WD Logo" loading="lazy" />
-            <h2 class="display-5 text-center text-primary mb-1">Login</h2>
+            <h3 class="text-center text-primary mb-1">Login</h3>
             <p class="text-center subheading-muted mb-3">Please provide login to access users.</p>
             <form @submit.prevent="onSubmit" class="vstack gap-3">
               <div>
