@@ -269,7 +269,7 @@
             </div>
           </div>
 
-          <div class="col-12">
+          <div class="col-sm-6 col-lg-4 col-xl-3">
             <label class="form-label">Medical Report Submitted</label>
             <div class="d-flex flex-wrap align-items-center gap-3">
               <div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="medYes" name="medReport" value="Yes" v-model="form.medicalReport"><label class="form-check-label" for="medYes">Yes</label></div>
