@@ -142,8 +142,16 @@
 import { reactive, ref } from 'vue';
 import SuccessModal from '../components/SuccessModal.vue';
 const form = reactive({
-  faceId: '', osaName: '', cveId: '', service: '', name: '', gender: '', aadhaar: '', dob: '', maritalStatus: '', spouseName: '', qualification: '', fatherName: '', motherName: '', religion: '', caste: '', permAddress: '', presAddress: '', contactPhone: '', emergencyContact: '', identMark1: '', identMark2: '', bloodGroup: '', expCompany: '', expPeriod: '', expDesignation: '', expReason: '', referenceBy: '', dateOfJoining: '', trainingArea: '', batchNo: '', trainingSkill: '', trainingFrom: '', trainingTo: '', completionDate: '', daysAttended: null
+  faceId: '', osaName: '', cveId: '', service: '', name: '', gender: '', aadhaar: '', dob: '', maritalStatus: '', spouseName: '', qualification: '', fatherName: '', motherName: '', religion: '', caste: '', permAddress: '', presAddress: '', contactPhone: '', emergencyContact: '', identMark1: '', identMark2: '', bloodGroup: '', expCompany: '', expPeriod: '', expDesignation: '', expReason: '', referenceBy: '', dateOfJoining: '', trainingArea: '', batchNo: '', trainingSkill: '', trainingFrom: '', trainingTo: '', completionDate: '', daysAttended: null, photoUrl: ''
 });
+
+const onPhotoChange = (e) => {
+  const file = e.target.files && e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = () => { form.photoUrl = String(reader.result || ''); };
+  reader.readAsDataURL(file);
+};
 
 const showSuccess = ref(false);
 const submit = () => {
