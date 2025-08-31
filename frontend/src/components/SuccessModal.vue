@@ -8,7 +8,7 @@
         </div>
         <div class="modal-body text-center">
           <div class="display-5 text-primary">✓</div>
-          <h4 class="mt-2">Thank you! Your form has been submitted.</h4>
+          <h4 class="modal-title section-heading mt-2">Thank you! Your form has been submitted.</h4>
           <p class="text-muted mb-0">We have captured your details. Our team will review and get back to you.</p>
         </div>
         <div class="modal-footer justify-content-center">
