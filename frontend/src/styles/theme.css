@@ -30,7 +30,7 @@ body { margin: 0; font-family: var(--font-family); color: var(--color-dark); bac
 /* Forms */
 .form-label { color: var(--color-primary-dark); font-weight: var(--font-weight-medium); }
 .form-control, .form-select, .form-control:focus, .form-select:focus { border-color: var(--color-border); }
-.form-control { border-radius: var(--border-radius-md);height: 42px !important; }
+.form-control { border-radius: var(--border-radius-md);height: 42px !important;font-size: var(--font-size-sm); }
 .form-control::placeholder { color: var(--color-muted); opacity: 1; }
 textarea.form-control { min-height: 84px; }
 
