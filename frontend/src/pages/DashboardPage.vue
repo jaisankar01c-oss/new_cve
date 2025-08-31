@@ -40,28 +40,30 @@
     <section class="card">
       <div class="card-body">
         <h3 class="section-heading subheading-large mb-3">Users</h3>
-        <table class="table table-hover align-middle">
-          <thead>
-            <tr>
-              <th>FACE ID</th>
-              <th>Name</th>
-              <th>Mobile</th>
-              <th>Gender</th>
-              <th style="width: 112px;">Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="u in users" :key="u.faceId">
-              <td>{{ u.faceId }}</td>
-              <td>{{ u.name }}</td>
-              <td>{{ u.mobile }}</td>
-              <td>{{ u.gender }}</td>
-              <td>
-                <button class="btn btn-outline-primary btn-sm" @click="openView(u)">View</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-responsive">
+          <table class="table table-hover table-sm align-middle mb-0">
+            <thead>
+              <tr>
+                <th>FACE ID</th>
+                <th>Name</th>
+                <th>Mobile</th>
+                <th>Gender</th>
+                <th style="width: 112px;">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="u in users" :key="u.faceId">
+                <td>{{ u.faceId }}</td>
+                <td>{{ u.name }}</td>
+                <td>{{ u.mobile }}</td>
+                <td>{{ u.gender }}</td>
+                <td>
+                  <button class="btn btn-outline-primary btn-sm" @click="openView(u)">View</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
 
