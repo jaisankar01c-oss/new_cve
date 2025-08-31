@@ -1,6 +1,7 @@
 html, body, #app { height: 100%; }
 * { box-sizing: border-box; }
 body { margin: 0; font-family: var(--font-family); color: var(--color-dark); background: var(--color-light); }
+:root { --bs-font-sans-serif: var(--font-family); --bs-body-font-family: var(--font-family); }
 
 /* Navbar gradient using brand colors */
 .navbar.bg-primary { background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark)) !important; }
