@@ -37,8 +37,8 @@
       </div>
     </section>
 
-    <section class="card border-0 shadow-none bg-transparent">
-      <div class="card-body">
+    <section class="card border-0 shadow-none bg-transparent p-0">
+      <div class="card-body p-0">
         <h3 class="section-heading subheading-large mb-3">Users</h3>
         <div class="row g-2 mb-3">
           <div class="col-12 col-md-3">
