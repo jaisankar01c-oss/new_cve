@@ -1,7 +1,7 @@
 <template>
   <div class="modal fade show d-block" tabindex="-1" @click.self="$emit('close')">
     <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
+      <div class="modal-content p-3">
         <div class="modal-body text-center">
           <div class="display-5 text-primary">✓</div>
           <h4 class="modal-title section-heading mt-2">Thank you! Your form has been submitted.</h4>
