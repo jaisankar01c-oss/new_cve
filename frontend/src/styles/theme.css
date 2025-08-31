@@ -12,7 +12,7 @@ body { margin: 0; font-family: var(--font-family); color: var(--color-dark); bac
 /* Buttons */
 .btn-primary { background-color: var(--color-primary) !important; border-color: var(--color-primary) !important; height: 44px !important;font-size: var(--font-size-sm);}
 .btn-primary:hover { background-color: var(--color-primary-dark) !important; border-color: var(--color-primary-dark) !important; }
-.btn-outline-primary { color: var(--color-primary) !important; border-color: var(--color-primary) !important;font-size: var(--font-size-sm);height: 44px !important; }
+.btn-outline-primary { color: var(--color-primary) !important; border-color: var(--color-primary) !important;font-size: var(--font-size-sm); }
 .btn-outline-primary:hover { background-color: var(--color-primary) !important; color: var(--color-white) !important; }
 
 /* Cards */
