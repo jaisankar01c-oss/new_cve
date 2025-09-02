@@ -31,8 +31,6 @@
               <div class="col-md-3"><span class="detail-label">Reference By</span><div class="detail-value">{{ user.referenceBy || '-' }}</div></div>
               <div class="col-md-3"><span class="detail-label">Area of Training</span><div class="detail-value">{{ user.trainingArea || '-' }}</div></div>
               <div class="col-md-3"><span class="detail-label">Name of the OSA</span><div class="detail-value">{{ user.osaName || '-' }}</div></div>
-              <div class="col-md-3"><span class="detail-label">Area</span><div class="detail-value">{{ user.area || '-' }}</div></div>
-              <div class="col-md-3"><span class="detail-label">OSA</span><div class="detail-value">{{ user.osa || '-' }}</div></div>
             </div>
           </section>
 
@@ -44,6 +42,7 @@
               <div class="col-md-4"><span class="detail-label">Gender</span><div class="detail-value">{{ user.gender || '-' }}</div></div>
               <div class="col-md-4"><span class="detail-label">Aadhaar No</span><div class="detail-value">{{ user.aadhaar || '-' }}</div></div>
               <div class="col-md-4"><span class="detail-label">Date of Birth</span><div class="detail-value">{{ user.dob || '-' }}</div></div>
+              <div class="col-md-4"><span class="detail-label">Age</span><div class="detail-value">{{ user.age ?? '-' }}</div></div>
               <div class="col-md-4"><span class="detail-label">Marital Status</span><div class="detail-value">{{ user.maritalStatus || '-' }}</div></div>
               <div class="col-md-4" v-if="user.maritalStatus==='Married'"><span class="detail-label">Spouse Name</span><div class="detail-value">{{ user.spouseName || '-' }}</div></div>
               <div class="col-md-4" v-else-if="user.maritalStatus==='Single'"><span class="detail-label">Sibling Name</span><div class="detail-value">{{ user.siblingName || '-' }}</div></div>
@@ -85,7 +84,8 @@
               <div class="col-md-4"><span class="detail-label">Pincode</span><div class="detail-value">{{ user.presentAddress?.pincode || '-' }}</div></div>
 
               <div class="col-md-6"><span class="detail-label">Contact Telephone Number</span><div class="detail-value">{{ user.contactPhone || '-' }}</div></div>
-              <div class="col-md-6"><span class="detail-label">Emergency Contact</span><div class="detail-value">{{ user.emergencyContact || '-' }}</div></div>
+              <div class="col-md-6"><span class="detail-label">Emergency Contact Name</span><div class="detail-value">{{ user.emergencyContact || '-' }}</div></div>
+              <div class="col-md-6"><span class="detail-label">Emergency Contact Number</span><div class="detail-value">{{ user.emergencyContactNumber || '-' }}</div></div>
             </div>
           </section>
 
@@ -135,7 +135,7 @@
               <div class="col-md-6"><span class="detail-label">Decision</span><div class="detail-value">{{ user.trainingDecision || '-' }}</div></div>
               <div class="col-12"><span class="detail-label">Comments</span><div class="detail-value">{{ user.comments || '-' }}</div></div>
               <div class="col-md-6"><span class="detail-label">Filled by</span><div class="detail-value">{{ user.filledBy || '-' }}</div></div>
-              <div class="col-md-6"><span class="detail-label">OSA Signature</span><div class="detail-value">{{ user.osaSignature || '-' }}</div></div>
+              <div class="col-md-6"><span class="detail-label">OSA representative</span><div class="detail-value">{{ user.osaSignature || '-' }}</div></div>
             </div>
           </section>
         </div>

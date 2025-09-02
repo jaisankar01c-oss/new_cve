@@ -20,17 +20,11 @@
           </div>
           <div class="col-md-3">
             <label class="form-label">Nature of Service</label>
-            <input v-model="form.service" class="form-control" type="text" placeholder="Enter Nature of Service" />
-          </div>
-        </div>
-        <div class="row g-3 mt-0">
-          <div class="col-md-3">
-            <label class="form-label">Area</label>
-            <input v-model="form.area" class="form-control" type="text" placeholder="Enter Area" />
-          </div>
-          <div class="col-md-3">
-            <label class="form-label">OSA</label>
-            <input v-model="form.osa" class="form-control" type="text" placeholder="Enter OSA" />
+            <div class="d-flex flex-wrap align-items-center gap-3">
+              <div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="srvGlass" name="natureService" value="Glass" v-model="form.service"><label class="form-check-label" for="srvGlass">Glass</label></div>
+              <div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="srvSolution" name="natureService" value="solution" v-model="form.service"><label class="form-check-label" for="srvSolution">solution</label></div>
+              <div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="srvHoho" name="natureService" value="HOHO" v-model="form.service"><label class="form-check-label" for="srvHoho">HOHO</label></div>
+            </div>
           </div>
         </div>
       </section>
@@ -47,10 +41,23 @@
               <option>Transgender</option>
             </select>
           </div>
-          <div class="col-md-4"><label class="form-label">Aadhaar No</label><input v-model="form.aadhaar" class="form-control" type="text" placeholder="Enter Aadhaar Number" /></div>
+          <div class="col-md-4">
+            <label class="form-label">Aadhaar No</label>
+            <input
+              v-model="form.aadhaar"
+              class="form-control"
+              type="text"
+              inputmode="numeric"
+              autocomplete="off"
+              placeholder="1234 5678 9012"
+              maxlength="14"
+              @input="onAadhaarInput"
+            />
+          </div>
         </div>
         <div class="row g-3 mt-0">
           <div class="col-md-4"><label class="form-label">Date of Birth</label><input v-model="form.dob" class="form-control" type="date" /></div>
+          <div class="col-md-4"><label class="form-label">Age</label><input v-model.number="form.age" class="form-control" type="number" min="0" placeholder="Enter Age" /></div>
           <div class="col-md-4"><label class="form-label">Marital Status</label>
             <select v-model="form.maritalStatus" class="form-select">
               <option value="">Select</option>
@@ -109,6 +116,11 @@
                 <i class="bi bi-person fs-2 text-muted"></i>
               </div>
             </div>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Upload Aadhaar Card</label>
+            <input class="form-control" type="file" accept="image/*,application/pdf" @change="onAadhaarFileChange" />
+            <div class="mt-2 small text-muted" v-if="form.aadhaarFileName">Selected: {{ form.aadhaarFileName }}</div>
           </div>
         </div>
         <div class="row g-3 mt-0">
@@ -204,8 +216,8 @@
           </div>
 
           <div class="col-12">
-            <label class="form-label">Address</label>
-            <input v-model="form.permanentAddress.address" class="form-control" type="text" placeholder="Address" />
+            <label class="form-label">Door Number</label>
+            <input v-model="form.permanentAddress.address" class="form-control" type="text" placeholder="Door Number" />
           </div>
           <div class="col-md-4"><label class="form-label">City/Village</label><input v-model="form.permanentAddress.cityVillage" class="form-control" type="text" placeholder="City/Village" /></div>
           <div class="col-md-4"><label class="form-label">Post</label><input v-model="form.permanentAddress.post" class="form-control" type="text" placeholder="Post" /></div>
@@ -219,8 +231,8 @@
           </div>
 
           <div class="col-12 mt-2">
-            <label class="form-label"> Address</label>
-            <input v-model="form.presentAddress.address" class="form-control" type="text" placeholder="Address" />
+            <label class="form-label">Door Number</label>
+            <input v-model="form.presentAddress.address" class="form-control" type="text" placeholder="Door Number" />
           </div>
           <div class="col-md-4"><label class="form-label">City/Village</label><input v-model="form.presentAddress.cityVillage" class="form-control" type="text" placeholder="City/Village" /></div>
           <div class="col-md-4"><label class="form-label">Post</label><input v-model="form.presentAddress.post" class="form-control" type="text" placeholder="Post" /></div>
@@ -230,7 +242,8 @@
           <div class="col-md-4"><label class="form-label">Pincode</label><input v-model="form.presentAddress.pincode" class="form-control" type="text" placeholder="Pincode" /></div>
 
           <div class="col-md-6"><label class="form-label">Contact Telephone Number</label><input v-model="form.contactPhone" class="form-control" type="text" placeholder="Enter Phone Number" /></div>
-          <div class="col-md-6"><label class="form-label">Emergency Contact (First Information Given to)</label><input v-model="form.emergencyContact" class="form-control" type="text" placeholder="Enter Emergency Contact Name" /></div>
+          <div class="col-md-6"><label class="form-label">Emergency Contact Name</label><input v-model="form.emergencyContact" class="form-control" type="text" placeholder="Enter Emergency Contact Name" /></div>
+          <div class="col-md-6"><label class="form-label">Emergency Contact Number</label><input v-model="form.emergencyContactNumber" class="form-control" type="text" placeholder="Enter Emergency Contact Number" /></div>
         </div>
       </section>
 
@@ -394,7 +407,7 @@
 
           <div class="col-12"><label class="form-label">Comments</label><textarea v-model="form.comments" class="form-control" rows="2" placeholder="Enter comments"></textarea></div>
           <div class="col-md-6"><label class="form-label">Filled by</label><input v-model="form.filledBy" class="form-control" type="text" placeholder="Enter name" /></div>
-          <div class="col-md-6"><label class="form-label">OSA Signature</label><input v-model="form.osaSignature" class="form-control" type="text" placeholder="Enter signature name" /></div>
+          <div class="col-md-6"><label class="form-label">OSA representative</label><input v-model="form.osaSignature" class="form-control" type="text" placeholder="Enter representative name" /></div>
         </div>
       </section>
 
@@ -410,7 +423,7 @@
 import { reactive, ref } from 'vue';
 import SuccessModal from '../components/SuccessModal.vue';
 const form = reactive({
-  faceId: '', osaName: '', cveId: '', service: '', area: '', osa: '', name: '', gender: '', aadhaar: '', dob: '', maritalStatus: '', spouseName: '', spouseOccupication: '', siblingCount: '', qualification: '', educationalStatus: '',educationalCategory:'', fatherName: '', motherName: '', fatherOccupation: '', motherOccupation: '', nativePlace: '', otherIncome: '', religion: '', caste: '', contactPhone: '', emergencyContact: '', identMark1: '', identMark2: '', bloodGroup: '', expCompany: '', expPeriod: '', expDesignation: '', expReason: '', referenceBy: '', dateOfJoining: '', trainingArea: '', batchNo: '', trainingSkill: '', trainingFrom: '', trainingTo: '', completionDate: '', daysAttended: null, photoUrl: '', recordsAvailable: [], recordsOther: '', languagesKnown: [], languagesOther: '',
+  faceId: '', osaName: '', cveId: '', service: '', name: '', gender: '', aadhaar: '', dob: '', age: null, maritalStatus: '', spouseName: '', spouseOccupication: '', siblingCount: '', qualification: '', educationalStatus: '',educationalCategory:'', fatherName: '', motherName: '', fatherOccupation: '', motherOccupation: '', nativePlace: '', otherIncome: '', religion: '', caste: '', contactPhone: '', emergencyContact: '', emergencyContactNumber: '', identMark1: '', identMark2: '', bloodGroup: '', expCompany: '', expPeriod: '', expDesignation: '', expReason: '', referenceBy: '', dateOfJoining: '', trainingArea: '', batchNo: '', trainingSkill: '', trainingFrom: '', trainingTo: '', completionDate: '', daysAttended: null, photoUrl: '', aadhaarFileName: '', recordsAvailable: [], recordsOther: '', languagesKnown: [], languagesOther: '',
   presentAddress: { address: '', cityVillage: '', post: '', taluk: '', district: '', state: '', pincode: '' },
   permanentAddress: { address: '', cityVillage: '', post: '', taluk: '', district: '', state: '', pincode: '' },
   physicalFitness: '', eyeTestReport: '', ageProof: '', medicalReport: '', drivingLicense: '', knowledgeOfWork: '', salaryDetailsAgreement: '', orientationOSSP: '', benefitsBriefing: '', benefitsStatutory: '', benefitsPPE: '', benefitsESIPF: '', benefitsRewards: '', natureOfJobBriefing: '', trainingDecision: '', comments: '', filledBy: '', osaSignature: ''
@@ -422,6 +435,17 @@ const onPhotoChange = (e) => {
   const reader = new FileReader();
   reader.onload = () => { form.photoUrl = String(reader.result || ''); };
   reader.readAsDataURL(file);
+};
+
+const onAadhaarFileChange = (e) => {
+  const file = e.target.files && e.target.files[0];
+  form.aadhaarFileName = file ? file.name : '';
+};
+
+const onAadhaarInput = (e) => {
+  const digits = String(e.target.value).replace(/\D/g, '').slice(0, 12);
+  const parts = [digits.slice(0,4), digits.slice(4,8), digits.slice(8,12)].filter(Boolean);
+  form.aadhaar = parts.join(' ');
 };
 
 const showSuccess = ref(false);
